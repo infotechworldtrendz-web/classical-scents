@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500" role="img" aria-label="Saffron Royale bottle"><defs>
+<linearGradient id="p2bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1C1C1C"/><stop offset="1" stop-color="#0B0B0B"/></linearGradient>
+<radialGradient id="p2glow" cx=".5" cy=".55" r=".55"><stop offset="0" stop-color="#C9A55C" stop-opacity=".16"/><stop offset="1" stop-color="#C9A55C" stop-opacity="0"/></radialGradient>
+<linearGradient id="p2g" x1="0" x2="1"><stop offset="0" stop-color="#a8552a" stop-opacity=".5"/><stop offset=".42" stop-color="#a8552a" stop-opacity=".9"/><stop offset=".55" stop-color="#fff" stop-opacity=".14"/><stop offset=".7" stop-color="#a8552a" stop-opacity=".85"/><stop offset="1" stop-color="#a8552a" stop-opacity=".45"/></linearGradient>
+<linearGradient id="p2c" x1="0" x2="1"><stop offset="0" stop-color="#8f6f2f"/><stop offset=".3" stop-color="#E6D3A3"/><stop offset=".55" stop-color="#C9A55C"/><stop offset="1" stop-color="#7a5c22"/></linearGradient>
+</defs><rect width="400" height="500" fill="url(#p2bg)"/><rect width="400" height="500" fill="url(#p2glow)"/><g transform="rotate(-9 200 300) translate(0 6)"><g>
+<ellipse cx="200" cy="452" rx="90" ry="10" fill="#000" opacity=".55"/>
+<rect x="120" y="150" width="160" height="290" rx="8" fill="url(#p2g)" stroke="#C9A55C" stroke-opacity=".4"/>
+<rect x="128" y="190" width="144" height="242" rx="5" fill="#a8552a" fill-opacity=".35"/>
+<path d="M150 150 L170 118 H230 L250 150 Z" fill="#a8552a" fill-opacity=".75" stroke="#C9A55C" stroke-opacity=".3"/>
+<rect x="172" y="96" width="56" height="24" fill="#2A2A2A" stroke="#C9A55C" stroke-opacity=".5"/>
+<rect x="160" y="40" width="80" height="60" rx="3" fill="url(#p2c)"/>
+<path d="M170 50h60M170 60h60M170 70h60M170 80h60M170 90h60" stroke="#000" stroke-opacity=".18"/>
+<rect x="132" y="165" width="10" height="250" rx="5" fill="#fff" opacity=".08"/>
+<rect x="150" y="250" width="100" height="74" fill="none" stroke="#C9A55C" stroke-opacity=".65"/>
+<text x="200" y="276" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="11" letter-spacing="3" fill="#E6D3A3">CLASSICAL</text>
+<text x="200" y="298" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" fill="#F2EDE4">Saffron Royale</text>
+<text x="200" y="314" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" letter-spacing="2" fill="#9A9388">EXTRAIT DE PARFUM</text></g></g></svg>

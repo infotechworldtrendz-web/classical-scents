@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500" role="img" aria-label="Oud Mystique bottle"><defs>
+<linearGradient id="p12bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1C1C1C"/><stop offset="1" stop-color="#0B0B0B"/></linearGradient>
+<radialGradient id="p12glow" cx=".5" cy=".55" r=".55"><stop offset="0" stop-color="#C9A55C" stop-opacity=".16"/><stop offset="1" stop-color="#C9A55C" stop-opacity="0"/></radialGradient>
+<linearGradient id="p12g" x1="0" x2="1"><stop offset="0" stop-color="#4a2a1a" stop-opacity=".5"/><stop offset=".42" stop-color="#4a2a1a" stop-opacity=".9"/><stop offset=".55" stop-color="#fff" stop-opacity=".14"/><stop offset=".7" stop-color="#4a2a1a" stop-opacity=".85"/><stop offset="1" stop-color="#4a2a1a" stop-opacity=".45"/></linearGradient>
+<linearGradient id="p12c" x1="0" x2="1"><stop offset="0" stop-color="#8f6f2f"/><stop offset=".3" stop-color="#E6D3A3"/><stop offset=".55" stop-color="#C9A55C"/><stop offset="1" stop-color="#7a5c22"/></linearGradient>
+</defs><rect width="400" height="500" fill="url(#p12bg)"/><rect width="400" height="500" fill="url(#p12glow)"/><g transform="translate(0 0)"><g>
+<ellipse cx="200" cy="440" rx="80" ry="9" fill="#000" opacity=".55"/>
+<path d="M130 250 Q130 180 200 180 Q270 180 270 250 L270 400 Q270 430 240 430 L160 430 Q130 430 130 400 Z" fill="url(#p12g)" stroke="#C9A55C" stroke-opacity=".4"/>
+<path d="M150 300 Q150 250 200 250 Q250 250 250 300 L250 395 Q250 410 235 410 L165 410 Q150 410 150 395 Z" fill="#4a2a1a" fill-opacity=".55"/>
+<rect x="178" y="150" width="44" height="34" fill="#2A2A2A" stroke="#C9A55C" stroke-opacity=".5"/>
+<rect x="166" y="70" width="68" height="84" rx="6" fill="url(#p12c)"/>
+<path d="M176 84h48M176 98h48M176 112h48M176 126h48M176 140h48" stroke="#000" stroke-opacity=".2"/>
+<rect x="144" y="270" width="8" height="120" rx="4" fill="#fff" opacity=".08"/>
+<text x="200" y="335" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="11" letter-spacing="3" fill="#E6D3A3">CLASSICAL</text>
+<text x="200" y="356" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" fill="#F2EDE4">Oud Mystique</text>
+<text x="200" y="372" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" letter-spacing="2" fill="#9A9388">PURE ATTAR OIL</text></g></g></svg>
