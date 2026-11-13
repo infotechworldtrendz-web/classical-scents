@@ -22,7 +22,7 @@
   function imgSrc(p, n) { return 'images/products/' + p.image + '-' + n + '.' + IMAGE_EXT; }
   function picture(p, n, cls, alt, eager) {
     return '<picture>' + (USE_WEBP ? '<source type="image/webp" srcset="images/products/' + p.image + '-' + n + '.webp">' : '') +
-      '<img class="' + cls + '" src="' + imgSrc(p, n) + '" width="400" height="500" alt="' + esc(alt) + '"' + (eager ? '' : ' loading="lazy" decoding="async"') + '></picture>';
+      '<img class="' + cls + '" src="' + imgSrc(p, n) + '" width="800" height="800" alt="' + esc(alt) + '"' + (eager ? '' : ' loading="lazy" decoding="async"') + '></picture>';
   }
   function defSize(p) { for (var i = 0; i < p.sizes.length; i++) if (p.sizes[i].ml === 50) return p.sizes[i]; return p.sizes[Math.min(1, p.sizes.length - 1)]; }
   function sizeOf(p, ml) { for (var i = 0; i < p.sizes.length; i++) if (String(p.sizes[i].ml) === String(ml)) return p.sizes[i]; return defSize(p); }
@@ -88,7 +88,7 @@
   function renderCart() {
     var html = cart.length ? cart.map(function (c) {
       var i = lineInfo(c);
-      return '<div class="line" data-key="' + c.key + '"><a href="' + i.url + '" tabindex="-1" aria-hidden="true"><img src="' + i.img + '" width="72" height="90" alt="" loading="lazy" decoding="async"></a><div>' +
+      return '<div class="line" data-key="' + c.key + '"><a href="' + i.url + '" tabindex="-1" aria-hidden="true"><img src="' + i.img + '" width="80" height="80" alt="" loading="lazy" decoding="async"></a><div>' +
         '<a class="line__name" href="' + i.url + '">' + esc(i.name) + '</a><div class="line__meta">' + esc(i.meta) + '</div><div class="line__row">' +
         '<div class="qty"><button type="button" data-qty="-1" aria-label="Decrease quantity of ' + esc(i.name) + '">−</button><span aria-live="polite">' + c.qty + '</span><button type="button" data-qty="1" aria-label="Increase quantity of ' + esc(i.name) + '">+</button></div>' +
         '<span class="price">' + fmt(i.price * c.qty) + '</span></div><button type="button" class="line__remove" data-remove>Remove</button></div></div>';
@@ -386,7 +386,7 @@
     var md = $('meta[name="description"]'); if (md) md.content = (p.description.split('. ')[0] + '. ' + p.family + ' notes of ' + p.keyNotes.join(', ') + '. From ' + fmt(fromPrice(p)) + ', delivered across Pakistan.').slice(0, 155);
     var cn = $('link[rel="canonical"]'); if (cn) cn.href = url; $$('meta[property="og:title"], meta[name="twitter:title"]').forEach(function (m) { m.content = p.name + ' | Classical Scents'; }); $$('meta[property="og:url"]').forEach(function (m) { m.content = url; });
     $('#crumb-current').textContent = p.name;
-    var thumbs = [1, 2, 3].map(function (n) { return '<button type="button" data-img="' + n + '" aria-current="' + (n === 1) + '" aria-label="View image ' + n + '"><img src="' + imgSrc(p, n) + '" width="72" height="90" alt="" loading="lazy" decoding="async"></button>'; }).join('');
+    var thumbs = [1, 2, 3].map(function (n) { return '<button type="button" data-img="' + n + '" aria-current="' + (n === 1) + '" aria-label="View image ' + n + '"><img src="' + imgSrc(p, n) + '" width="80" height="80" alt="" loading="lazy" decoding="async"></button>'; }).join('');
     var tier = function (l, notes) { return '<div class="pyramid__tier"><small>' + l + '</small><span>' + esc(notes.join(' · ')) + '</span></div>'; };
     var revs = REVIEWS.filter(function (r) { return r.productId === p.id; });
     var related = PRODUCTS.filter(function (x) { return x.id !== p.id && (x.family === p.family || x.collection === p.collection); }).sort(function (a, b) { return (b.family === p.family) - (a.family === p.family); }).slice(0, 4);

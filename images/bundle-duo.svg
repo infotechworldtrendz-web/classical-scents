@@ -1,6 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450" role="img" aria-label="His and hers duo"><defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1C1C1C"/><stop offset="1" stop-color="#0B0B0B"/></linearGradient>
-<radialGradient id="t" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#3b1f2b" stop-opacity=".45"/><stop offset="1" stop-color="#3b1f2b" stop-opacity="0"/></radialGradient></defs>
-<rect width="600" height="450" fill="url(#bg)"/><rect width="600" height="450" fill="url(#t)"/>
-<rect x="24" y="24" width="552" height="402" fill="none" stroke="#C9A55C" stroke-opacity=".35"/><g transform="translate(220 290) scale(0.6)"><rect x="0" y="40" width="80" height="140" rx="6" fill="#2b2a3d" fill-opacity=".7" stroke="#C9A55C" stroke-opacity=".5"/><rect x="26" y="20" width="28" height="20" fill="#2A2A2A"/><rect x="20" y="0" width="40" height="22" rx="2" fill="#C9A55C"/><rect x="6" y="50" width="6" height="110" rx="3" fill="#fff" opacity=".1"/></g><g transform="translate(320 290) scale(0.6)"><rect x="0" y="40" width="80" height="140" rx="6" fill="#d9cbb0" fill-opacity=".7" stroke="#C9A55C" stroke-opacity=".5"/><rect x="26" y="20" width="28" height="20" fill="#2A2A2A"/><rect x="20" y="0" width="40" height="22" rx="2" fill="#C9A55C"/><rect x="6" y="50" width="6" height="110" rx="3" fill="#fff" opacity=".1"/></g>
-<text x="300" y="215" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="55" fill="#E6D3A3">His &amp; Hers</text>
-<text x="300" y="255" text-anchor="middle" font-family="Inter,sans-serif" font-size="15" letter-spacing="4" fill="#9A9388">MIDNIGHT MUSK · NOOR</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450" role="img" aria-label="His and hers duo"><defs><radialGradient id="g42" cx=".5" cy=".42" r=".75"><stop offset="0" stop-color="#262234"/><stop offset=".55" stop-color="#141210"/><stop offset="1" stop-color="#0B0B0B"/></radialGradient></defs><rect width="600" height="450" fill="url(#g42)"/><defs><linearGradient id="gb43" x1="0" x2="1"><stop offset="0" stop-color="#0a0a0a"/><stop offset=".5" stop-color="#1f1f1f"/><stop offset="1" stop-color="#080808"/></linearGradient></defs>
+<ellipse cx="300" cy="401" rx="102" ry="14" fill="#000" opacity=".6"/>
+<rect x="215" y="305" width="170" height="90" fill="url(#gb43)" stroke="#C9A55C" stroke-opacity=".35"/>
+<rect x="209" y="283" width="182" height="26" fill="#161616" stroke="#C9A55C" stroke-opacity=".45"/>
+<rect x="291" y="283" width="18" height="112" fill="#C9A55C" opacity=".85"/>
+<ellipse cx="274" cy="273" rx="28" ry="14" fill="none" stroke="#C9A55C" stroke-width="9" transform="rotate(-18 274 273)"/>
+<ellipse cx="326" cy="273" rx="28" ry="14" fill="none" stroke="#C9A55C" stroke-width="9" transform="rotate(18 326 273)"/>
+<text x="300" y="356" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="13.076923076923077" letter-spacing="4" fill="#E6D3A3" fill-opacity=".85">CLASSICAL SCENTS</text><g transform="translate(-1 149.51999999999998) scale(0.34)"><defs><linearGradient id="q44gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".07" stop-color="#fff" stop-opacity=".06"/><stop offset=".5" stop-color="#fff" stop-opacity=".02"/><stop offset=".9" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity=".26"/></linearGradient>
+<linearGradient id="q44lq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b687c" stop-opacity=".82"/><stop offset=".55" stop-color="#3a3550" stop-opacity=".9"/><stop offset="1" stop-color="#1a1824" stop-opacity=".97"/></linearGradient>
+<linearGradient id="q44lh" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".18" stop-color="#000" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".06"/><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient>
+<linearGradient id="q44bs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b687c" stop-opacity=".55"/><stop offset=".6" stop-color="#3a3550" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient>
+<linearGradient id="q44cp" x1="0" x2="1"><stop offset="0" stop-color="#040404"/><stop offset="0.22" stop-color="#2c2c2c"/><stop offset="0.5" stop-color="#0e0e0e"/><stop offset="0.76" stop-color="#3a3a3a"/><stop offset="1" stop-color="#050505"/></linearGradient>
+<linearGradient id="q44cs" x1="0" x2="1"><stop offset="0" stop-color="#040404"/><stop offset="0.22" stop-color="#2c2c2c"/><stop offset="0.5" stop-color="#0e0e0e"/><stop offset="0.76" stop-color="#3a3a3a"/><stop offset="1" stop-color="#050505"/></linearGradient>
+<linearGradient id="q44co" x1="0" x2="1"><stop offset="0" stop-color="#5c4418"/><stop offset="0.14" stop-color="#a8863e"/><stop offset="0.34" stop-color="#f1e2b5"/><stop offset="0.52" stop-color="#c9a55c"/><stop offset="0.78" stop-color="#8a6a2c"/><stop offset="1" stop-color="#4f3a14"/></linearGradient>
+<linearGradient id="q44sp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".12" stop-color="#fff" stop-opacity=".7"/><stop offset=".8" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="q44sw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<filter id="q44bl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter></defs>
+<ellipse cx="410" cy="732" rx="215" ry="22" fill="#000" opacity=".55" filter="url(#q44bl)"/>
+<polygon points="490,372 580,346 580,692 490,722" fill="#3a3550" fill-opacity=".2" stroke="#fff" stroke-opacity=".22"/>
+<polygon points="500,398 568,368 568,644 500,672" fill="#201d2c" fill-opacity=".75"/>
+<polygon points="500,422 568,392 568,396 500,426" fill="#fff" fill-opacity=".3"/>
+<path d="M574 354V684" stroke="#fff" stroke-opacity=".5" stroke-width="3"/>
+<polygon points="490,372 580,346 580,348 490,374" fill="#fff" fill-opacity=".45"/>
+<rect x="210" y="372" width="280" height="350" rx="18" fill="url(#q44gl)" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/>
+<rect x="232" y="420" width="236" height="250" rx="8" fill="url(#q44lq)"/>
+<rect x="232" y="420" width="236" height="250" rx="8" fill="url(#q44lh)"/>
+<rect x="234" y="418" width="232" height="4" rx="2" fill="#fff" opacity=".38"/>
+<rect x="212" y="670" width="276" height="50" rx="16" fill="url(#q44bs)"/>
+<rect x="220" y="390" width="9" height="312" rx="4.5" fill="url(#q44sp)" opacity=".9"/>
+<rect x="250" y="402" width="26" height="250" rx="13" fill="url(#q44sp)" opacity=".14"/>
+<rect x="252" y="466" width="196" height="150" rx="2" fill="#0c0a07" fill-opacity=".84" stroke="#C9A55C" stroke-opacity=".9"/>
+<rect x="260" y="474" width="180" height="134" fill="none" stroke="#C9A55C" stroke-opacity=".45"/>
+<text x="350" y="502" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="11" letter-spacing="4" fill="#E6D3A3">CLASSICAL SCENTS</text>
+<path d="M332 513H368" stroke="#C9A55C" stroke-opacity=".7"/>
+<text x="350" y="546" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="25" font-weight="600" fill="#F2EDE4">Midnight Musk</text>
+<text x="350" y="570" text-anchor="middle" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="8.5" letter-spacing="3" fill="#C9A55C">EXTRAIT DE PARFUM</text>
+<text x="350" y="592" text-anchor="middle" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="8.5" letter-spacing="2" fill="#9A9388">50 ML · 1.7 FL.OZ</text>
+<polygon points="352,330 412,330 436,322 376,322" fill="#fff" fill-opacity=".12"/>
+<rect x="352" y="330" width="60" height="44" fill="#3a3550" fill-opacity=".3" stroke="#fff" stroke-opacity=".18"/>
+<rect x="336" y="306" width="92" height="28" rx="3" fill="url(#q44co)"/>
+<polygon points="428,306 452,298 452,326 428,334" fill="#5c4418"/>
+<polygon points="300,150 330,136 470,136 440,150" fill="url(#q44cs)" opacity=".9"/>
+<polygon points="300,150 330,136 470,136 440,150" fill="#fff" opacity=".2"/>
+<rect x="300" y="150" width="140" height="160" rx="5" fill="url(#q44cp)"/>
+<polygon points="440,150 470,136 470,296 440,310" fill="url(#q44cs)"/>
+<polygon points="440,150 470,136 470,296 440,310" fill="#000" opacity=".35"/>
+
+<rect x="318" y="156" width="8" height="148" rx="4" fill="#fff" opacity=".16"/>
+<text x="370" y="244" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="32" font-weight="600" fill="#C9A55C" fill-opacity="0.75">CS</text></g><g transform="translate(329 149.51999999999998) scale(0.34)"><defs><linearGradient id="q45gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".07" stop-color="#fff" stop-opacity=".06"/><stop offset=".5" stop-color="#fff" stop-opacity=".02"/><stop offset=".9" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity=".26"/></linearGradient>
+<linearGradient id="q45lq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3e9d1" stop-opacity=".82"/><stop offset=".55" stop-color="#efe2c2" stop-opacity=".9"/><stop offset="1" stop-color="#6c6657" stop-opacity=".97"/></linearGradient>
+<linearGradient id="q45lh" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".18" stop-color="#000" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".06"/><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient>
+<linearGradient id="q45bs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3e9d1" stop-opacity=".55"/><stop offset=".6" stop-color="#efe2c2" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient>
+<linearGradient id="q45cp" x1="0" x2="1"><stop offset="0" stop-color="#5c4418"/><stop offset="0.14" stop-color="#a8863e"/><stop offset="0.34" stop-color="#f1e2b5"/><stop offset="0.52" stop-color="#c9a55c"/><stop offset="0.78" stop-color="#8a6a2c"/><stop offset="1" stop-color="#4f3a14"/></linearGradient>
+<linearGradient id="q45cs" x1="0" x2="1"><stop offset="0" stop-color="#5c4418"/><stop offset="0.14" stop-color="#a8863e"/><stop offset="0.34" stop-color="#f1e2b5"/><stop offset="0.52" stop-color="#c9a55c"/><stop offset="0.78" stop-color="#8a6a2c"/><stop offset="1" stop-color="#4f3a14"/></linearGradient>
+<linearGradient id="q45co" x1="0" x2="1"><stop offset="0" stop-color="#5c4418"/><stop offset="0.14" stop-color="#a8863e"/><stop offset="0.34" stop-color="#f1e2b5"/><stop offset="0.52" stop-color="#c9a55c"/><stop offset="0.78" stop-color="#8a6a2c"/><stop offset="1" stop-color="#4f3a14"/></linearGradient>
+<linearGradient id="q45sp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".12" stop-color="#fff" stop-opacity=".7"/><stop offset=".8" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="q45sw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<filter id="q45bl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter><clipPath id="q45clip"><rect x="230" y="372" width="340" height="350" rx="22"/></clipPath></defs>
+<ellipse cx="400" cy="730" rx="205" ry="20" fill="#000" opacity=".55" filter="url(#q45bl)"/>
+<ellipse cx="400" cy="726" rx="150" ry="9" fill="#efe2c2" opacity=".35" filter="url(#q45bl)"/>
+<rect x="372" y="330" width="56" height="48" fill="#efe2c2" fill-opacity=".3" stroke="#fff" stroke-opacity=".18"/>
+<rect x="230" y="372" width="340" height="350" rx="22" fill="url(#q45gl)" stroke="#fff" stroke-opacity=".28" stroke-width="1.5"/>
+<rect x="254" y="396" width="292" height="274" rx="10" fill="#fff" fill-opacity=".03" stroke="#fff" stroke-opacity=".14"/>
+<rect x="254" y="422" width="292" height="248" rx="8" fill="url(#q45lq)"/>
+<rect x="254" y="422" width="292" height="248" rx="8" fill="url(#q45lh)"/>
+<rect x="256" y="420" width="288" height="4" rx="2" fill="#fff" opacity=".38"/>
+<rect x="232" y="380" width="22" height="292" fill="#efe2c2" fill-opacity=".22"/>
+<rect x="546" y="380" width="22" height="292" fill="#efe2c2" fill-opacity=".28"/>
+<rect x="232" y="670" width="336" height="50" rx="18" fill="url(#q45bs)"/>
+<path d="M252 671H548" stroke="#fff" stroke-opacity=".4"/>
+<path d="M250 719H550" stroke="#fff" stroke-opacity=".25"/>
+<rect x="241" y="390" width="9" height="312" rx="4.5" fill="url(#q45sp)" opacity=".85"/>
+<rect x="553" y="398" width="4" height="296" rx="2" fill="url(#q45sp)" opacity=".55"/>
+<rect x="268" y="404" width="30" height="250" rx="15" fill="url(#q45sp)" opacity=".14"/>
+<path d="M254 374H546" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+<rect x="295" y="466" width="210" height="150" rx="2" fill="#0c0a07" fill-opacity=".84" stroke="#C9A55C" stroke-opacity=".9"/>
+<rect x="303" y="474" width="194" height="134" fill="none" stroke="#C9A55C" stroke-opacity=".45"/>
+<text x="400" y="502" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="11" letter-spacing="4" fill="#E6D3A3">CLASSICAL SCENTS</text>
+<path d="M382 513H418" stroke="#C9A55C" stroke-opacity=".7"/>
+<text x="400" y="546" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="30" font-weight="600" fill="#F2EDE4">Noor</text>
+<text x="400" y="570" text-anchor="middle" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="8.5" letter-spacing="3" fill="#C9A55C">EXTRAIT DE PARFUM</text>
+<text x="400" y="592" text-anchor="middle" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="8.5" letter-spacing="2" fill="#9A9388">50 ML · 1.7 FL.OZ</text>
+
+<rect x="352" y="310" width="96" height="28" rx="3" fill="url(#q45co)"/>
+<path d="M352 317H448M352 331H448" stroke="#000" stroke-opacity=".25"/>
+<rect x="316" y="146" width="168" height="168" rx="7" fill="url(#q45cp)"/>
+<rect x="316" y="146" width="168" height="12" rx="6" fill="#fff" opacity=".22"/>
+<path d="M318 164H482M318 171H482M318 178H482M318 185H482M318 192H482M318 199H482M318 206H482M318 213H482M318 220H482M318 227H482M318 234H482M318 241H482M318 248H482M318 255H482M318 262H482M318 269H482M318 276H482M318 283H482M318 290H482M318 297H482M318 304H482" stroke="#fff" stroke-opacity="0.07" stroke-width=".8"/>
+<rect x="316" y="146" width="18" height="168" rx="7" fill="#000" opacity=".18"/>
+<rect x="466" y="146" width="18" height="168" rx="7" fill="#000" opacity=".25"/>
+<rect x="340" y="152" width="8" height="156" rx="4" fill="#fff" opacity="0.18"/>
+<text x="400" y="244" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="36" font-weight="600" fill="#4a3610" fill-opacity="0.5">CS</text></g></svg>

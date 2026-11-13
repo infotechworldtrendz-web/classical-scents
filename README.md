@@ -59,7 +59,7 @@ Rules the site relies on:
 
 All artwork is SVG so you can see the layout now. Swap in photos with the same base filenames:
 
-1. Product photos: `images/products/<image>-1.jpg`, `-2.jpg`, `-3.jpg` (front, angle, detail). Recommended 800×1000px, 4:5.
+1. Product photos: `images/products/<image>-1.jpg`, `-2.jpg`, `-3.jpg` (front, angle, detail). Recommended 800×800px square PNG with a transparent background (cards show the whole bottle, nothing is cropped).
 2. In `js/products.js` change `IMAGE_EXT = 'svg'` to `'jpg'` (or `'png'`).
 3. Optional WebP: add `<image>-1.webp` next to each photo and set `USE_WEBP = true`. Cards then render `<picture>` with a WebP source.
 4. Other images are referenced directly from the HTML: `images/collection-*.svg`, `gender-*.svg`, `insta-*.svg`, `about-*.svg`, `bundle-*.svg`, `map-placeholder.svg`. Replace the file and update the extension in the `src` attribute.

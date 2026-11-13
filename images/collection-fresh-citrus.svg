@@ -1,6 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-label="Fresh and citrus collection"><defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1C1C1C"/><stop offset="1" stop-color="#0B0B0B"/></linearGradient>
-<radialGradient id="t" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#5f8a4a" stop-opacity=".45"/><stop offset="1" stop-color="#5f8a4a" stop-opacity="0"/></radialGradient></defs>
-<rect width="600" height="800" fill="url(#bg)"/><rect width="600" height="800" fill="url(#t)"/>
-<rect x="24" y="24" width="552" height="752" fill="none" stroke="#C9A55C" stroke-opacity=".35"/><g transform="translate(260 480) scale(1)"><rect x="0" y="40" width="80" height="140" rx="6" fill="#c8c25a" fill-opacity=".7" stroke="#C9A55C" stroke-opacity=".5"/><rect x="26" y="20" width="28" height="20" fill="#2A2A2A"/><rect x="20" y="0" width="40" height="22" rx="2" fill="#C9A55C"/><rect x="6" y="50" width="6" height="110" rx="3" fill="#fff" opacity=".1"/></g>
-<text x="300" y="390" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="55" fill="#E6D3A3">Fresh &amp; Citrus</text>
-<text x="300" y="430" text-anchor="middle" font-family="Inter,sans-serif" font-size="15" letter-spacing="4" fill="#9A9388">COLD-PRESSED BRIGHTNESS</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-label="Fresh and citrus collection"><defs><radialGradient id="g10" cx=".5" cy=".42" r=".75"><stop offset="0" stop-color="#536b3c"/><stop offset=".55" stop-color="#141210"/><stop offset="1" stop-color="#0B0B0B"/></radialGradient></defs><rect width="600" height="800" fill="url(#g10)"/><defs><linearGradient id="pl11" x1="0" x2="1"><stop offset="0" stop-color="#1a1a17"/><stop offset=".45" stop-color="#444541"/><stop offset="1" stop-color="#161614"/></linearGradient></defs>
+<rect x="120" y="600" width="360" height="200" fill="url(#pl11)"/><ellipse cx="300" cy="600" rx="180" ry="21.599999999999998" fill="#555652"/><ellipse cx="300" cy="600" rx="180" ry="21.599999999999998" fill="none" stroke="#C9A55C" stroke-opacity=".35"/><g transform="translate(52 152.36) scale(0.62)"><defs><linearGradient id="q12gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".07" stop-color="#fff" stop-opacity=".06"/><stop offset=".5" stop-color="#fff" stop-opacity=".02"/><stop offset=".9" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity=".26"/></linearGradient>
+<linearGradient id="q12lq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eade8f" stop-opacity=".82"/><stop offset=".55" stop-color="#e3d36a" stop-opacity=".9"/><stop offset="1" stop-color="#665f30" stop-opacity=".97"/></linearGradient>
+<linearGradient id="q12lh" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".18" stop-color="#000" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".06"/><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient>
+<linearGradient id="q12bs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eade8f" stop-opacity=".55"/><stop offset=".6" stop-color="#e3d36a" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient>
+<linearGradient id="q12cp" x1="0" x2="1"><stop offset="0" stop-color="#9c927e"/><stop offset="0.3" stop-color="#e9e2d3"/><stop offset="0.45" stop-color="#f7f3ea"/><stop offset="0.7" stop-color="#d4cab6"/><stop offset="1" stop-color="#8f8571"/></linearGradient>
+<linearGradient id="q12cs" x1="0" x2="1"><stop offset="0" stop-color="#9c927e"/><stop offset="0.3" stop-color="#e9e2d3"/><stop offset="0.45" stop-color="#f7f3ea"/><stop offset="0.7" stop-color="#d4cab6"/><stop offset="1" stop-color="#8f8571"/></linearGradient>
+<linearGradient id="q12co" x1="0" x2="1"><stop offset="0" stop-color="#5c4418"/><stop offset="0.14" stop-color="#a8863e"/><stop offset="0.34" stop-color="#f1e2b5"/><stop offset="0.52" stop-color="#c9a55c"/><stop offset="0.78" stop-color="#8a6a2c"/><stop offset="1" stop-color="#4f3a14"/></linearGradient>
+<linearGradient id="q12sp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".12" stop-color="#fff" stop-opacity=".7"/><stop offset=".8" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="q12sw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<filter id="q12bl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter><clipPath id="q12clip"><rect x="230" y="372" width="340" height="350" rx="22"/></clipPath></defs>
+<ellipse cx="400" cy="730" rx="205" ry="20" fill="#000" opacity=".55" filter="url(#q12bl)"/>
+<ellipse cx="400" cy="726" rx="150" ry="9" fill="#e3d36a" opacity=".35" filter="url(#q12bl)"/>
+<rect x="372" y="330" width="56" height="48" fill="#e3d36a" fill-opacity=".3" stroke="#fff" stroke-opacity=".18"/>
+<rect x="230" y="372" width="340" height="350" rx="22" fill="url(#q12gl)" stroke="#fff" stroke-opacity=".28" stroke-width="1.5"/>
+<rect x="254" y="396" width="292" height="274" rx="10" fill="#fff" fill-opacity=".03" stroke="#fff" stroke-opacity=".14"/>
+<rect x="254" y="422" width="292" height="248" rx="8" fill="url(#q12lq)"/>
+<rect x="254" y="422" width="292" height="248" rx="8" fill="url(#q12lh)"/>
+<rect x="256" y="420" width="288" height="4" rx="2" fill="#fff" opacity=".38"/>
+<rect x="232" y="380" width="22" height="292" fill="#e3d36a" fill-opacity=".22"/>
+<rect x="546" y="380" width="22" height="292" fill="#e3d36a" fill-opacity=".28"/>
+<rect x="232" y="670" width="336" height="50" rx="18" fill="url(#q12bs)"/>
+<path d="M252 671H548" stroke="#fff" stroke-opacity=".4"/>
+<path d="M250 719H550" stroke="#fff" stroke-opacity=".25"/>
+<rect x="241" y="390" width="9" height="312" rx="4.5" fill="url(#q12sp)" opacity=".85"/>
+<rect x="553" y="398" width="4" height="296" rx="2" fill="url(#q12sp)" opacity=".55"/>
+<rect x="268" y="404" width="30" height="250" rx="15" fill="url(#q12sp)" opacity=".14"/>
+<path d="M254 374H546" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+<rect x="295" y="466" width="210" height="150" rx="2" fill="#0c0a07" fill-opacity=".84" stroke="#C9A55C" stroke-opacity=".9"/>
+<rect x="303" y="474" width="194" height="134" fill="none" stroke="#C9A55C" stroke-opacity=".45"/>
+<text x="400" y="502" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="11" letter-spacing="4" fill="#E6D3A3">CLASSICAL SCENTS</text>
+<path d="M382 513H418" stroke="#C9A55C" stroke-opacity=".7"/>
+<text x="400" y="546" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="25" font-weight="600" fill="#F2EDE4">Citrus Veil</text>
+<text x="400" y="570" text-anchor="middle" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="8.5" letter-spacing="3" fill="#C9A55C">EXTRAIT DE PARFUM</text>
+<text x="400" y="592" text-anchor="middle" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="8.5" letter-spacing="2" fill="#9A9388">50 ML · 1.7 FL.OZ</text>
+
+<rect x="352" y="310" width="96" height="28" rx="3" fill="url(#q12co)"/>
+<path d="M352 317H448M352 331H448" stroke="#000" stroke-opacity=".25"/>
+<rect x="316" y="146" width="168" height="168" rx="7" fill="url(#q12cp)"/>
+<rect x="316" y="146" width="168" height="12" rx="6" fill="#fff" opacity=".22"/>
+<path d="M318 164H482M318 171H482M318 178H482M318 185H482M318 192H482M318 199H482M318 206H482M318 213H482M318 220H482M318 227H482M318 234H482M318 241H482M318 248H482M318 255H482M318 262H482M318 269H482M318 276H482M318 283H482M318 290H482M318 297H482M318 304H482" stroke="#fff" stroke-opacity="0.07" stroke-width=".8"/>
+<rect x="316" y="146" width="18" height="168" rx="7" fill="#000" opacity=".18"/>
+<rect x="466" y="146" width="18" height="168" rx="7" fill="#000" opacity=".25"/>
+<rect x="340" y="152" width="8" height="156" rx="4" fill="#fff" opacity="0.18"/>
+<text x="400" y="244" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="36" font-weight="600" fill="#8a7a5c" fill-opacity="0.75">CS</text></g><circle cx="150" cy="640" r="48" fill="#e8d25a"/><circle cx="150" cy="640" r="41.28" fill="#f6ec9e"/><path d="M150 640L189.4 640.0" stroke="#e3cf55" stroke-width="2"/><path d="M150 640L181.8 663.1" stroke="#e3cf55" stroke-width="2"/><path d="M150 640L162.2 677.4" stroke="#e3cf55" stroke-width="2"/><path d="M150 640L137.8 677.4" stroke="#e3cf55" stroke-width="2"/><path d="M150 640L118.2 663.1" stroke="#e3cf55" stroke-width="2"/><path d="M150 640L110.6 640.0" stroke="#e3cf55" stroke-width="2"/><path d="M150 640L118.2 616.9" stroke="#e3cf55" stroke-width="2"/><path d="M150 640L137.8 602.6" stroke="#e3cf55" stroke-width="2"/><path d="M150 640L162.2 602.6" stroke="#e3cf55" stroke-width="2"/><path d="M150 640L181.8 616.9" stroke="#e3cf55" stroke-width="2"/><circle cx="465" cy="668" r="36" fill="#e8d25a"/><circle cx="465" cy="668" r="30.96" fill="#f6ec9e"/><path d="M465 668L494.5 668.0" stroke="#e3cf55" stroke-width="2"/><path d="M465 668L488.9 685.4" stroke="#e3cf55" stroke-width="2"/><path d="M465 668L474.1 696.1" stroke="#e3cf55" stroke-width="2"/><path d="M465 668L455.9 696.1" stroke="#e3cf55" stroke-width="2"/><path d="M465 668L441.1 685.4" stroke="#e3cf55" stroke-width="2"/><path d="M465 668L435.5 668.0" stroke="#e3cf55" stroke-width="2"/><path d="M465 668L441.1 650.6" stroke="#e3cf55" stroke-width="2"/><path d="M465 668L455.9 639.9" stroke="#e3cf55" stroke-width="2"/><path d="M465 668L474.1 639.9" stroke="#e3cf55" stroke-width="2"/><path d="M465 668L488.9 650.6" stroke="#e3cf55" stroke-width="2"/></svg>
