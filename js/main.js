@@ -19,9 +19,13 @@
   function byId(id) { for (var i = 0; i < PRODUCTS.length; i++) if (String(PRODUCTS[i].id) === String(id)) return PRODUCTS[i]; return null; }
   function bySlug(s) { for (var i = 0; i < PRODUCTS.length; i++) if (PRODUCTS[i].slug === s) return PRODUCTS[i]; return null; }
   function bundleById(id) { for (var i = 0; i < BUNDLES.length; i++) if (BUNDLES[i].id === id) return BUNDLES[i]; return null; }
-  function imgSrc(p, n) { return 'images/products/' + p.image + '-' + n + '.' + IMAGE_EXT; }
+  function imgSrc(p, n) { return 'images/products/' + (p.photos ? p.photos[n - 1] : p.image + '-' + n + '.' + IMAGE_EXT); }
+  function webpSrc(p, n) { return p.photos ? imgSrc(p, n).replace(/\.(png|jpg)$/, '.webp') : (USE_WEBP ? 'images/products/' + p.image + '-' + n + '.webp' : ''); }
+  function thumbSrc(p, n) { return webpSrc(p, n) || imgSrc(p, n); }
+  function isPhoto(p, n) { return /\.jpg$/.test(imgSrc(p, n)); }
   function picture(p, n, cls, alt, eager) {
-    return '<picture>' + (USE_WEBP ? '<source type="image/webp" srcset="images/products/' + p.image + '-' + n + '.webp">' : '') +
+    var webp = webpSrc(p, n); cls += isPhoto(p, n) ? ' is-photo' : '';
+    return '<picture>' + (webp ? '<source type="image/webp" srcset="' + webp + '">' : '') +
       '<img class="' + cls + '" src="' + imgSrc(p, n) + '" width="800" height="800" alt="' + esc(alt) + '"' + (eager ? '' : ' loading="lazy" decoding="async"') + '></picture>';
   }
   function defSize(p) { for (var i = 0; i < p.sizes.length; i++) if (p.sizes[i].ml === 50) return p.sizes[i]; return p.sizes[Math.min(1, p.sizes.length - 1)]; }
@@ -70,7 +74,7 @@
   /* ---------- cart ---------- */
   function lineInfo(c) {
     var p = byId(c.id), b;
-    if (p) { var s = sizeOf(p, c.ml); return { name: p.name, price: s.price, img: imgSrc(p, 1), meta: s.ml + 'ml • ' + p.family, url: 'product.html?id=' + p.id, max: p.stock }; }
+    if (p) { var s = sizeOf(p, c.ml); return { name: p.name, price: s.price, img: thumbSrc(p, 1), meta: s.ml + 'ml • ' + p.family, url: 'product.html?id=' + p.id, max: p.stock }; }
     b = bundleById(c.id);
     if (b) return { name: b.name, price: b.price, img: b.image, meta: b.subtitle, url: 'shop.html?collection=gift-sets', max: b.stock };
     return null;
@@ -203,7 +207,7 @@
         var v = si.value.trim().toLowerCase();
         if (v.length < 2) { sr.innerHTML = ''; return; }
         var hits = PRODUCTS.filter(function (p) { return [p.name, p.family, p.gender, p.collection, p.type].concat(p.topNotes, p.heartNotes, p.baseNotes).join(' ').toLowerCase().indexOf(v) > -1; }).slice(0, 6);
-        sr.innerHTML = hits.length ? hits.map(function (p) { return '<a class="search__item" href="product.html?id=' + p.id + '"><img src="' + imgSrc(p, 1) + '" width="56" height="70" alt=""><span><strong>' + esc(p.name) + '</strong><small>' + esc(p.family) + ' • ' + esc(p.keyNotes.join(', ')) + '</small></span><span class="price">' + fmt(defSize(p).price) + '</span></a>'; }).join('') : '<p class="search__hint">No matches. Try a note like "oud", "rose" or "citrus".</p>';
+        sr.innerHTML = hits.length ? hits.map(function (p) { return '<a class="search__item" href="product.html?id=' + p.id + '"><img src="' + thumbSrc(p, 1) + '" width="56" height="70" alt=""><span><strong>' + esc(p.name) + '</strong><small>' + esc(p.family) + ' • ' + esc(p.keyNotes.join(', ')) + '</small></span><span class="price">' + fmt(defSize(p).price) + '</span></a>'; }).join('') : '<p class="search__hint">No matches. Try a note like "oud", "rose" or "citrus".</p>';
       });
       si.addEventListener('keydown', function (e) { var f = $('.search__item', sr); if (e.key === 'Enter' && f) location.href = f.href; });
     }
@@ -386,7 +390,7 @@
     var md = $('meta[name="description"]'); if (md) md.content = (p.description.split('. ')[0] + '. ' + p.family + ' notes of ' + p.keyNotes.join(', ') + '. From ' + fmt(fromPrice(p)) + ', delivered across Pakistan.').slice(0, 155);
     var cn = $('link[rel="canonical"]'); if (cn) cn.href = url; $$('meta[property="og:title"], meta[name="twitter:title"]').forEach(function (m) { m.content = p.name + ' | Classical Scents'; }); $$('meta[property="og:url"]').forEach(function (m) { m.content = url; });
     $('#crumb-current').textContent = p.name;
-    var thumbs = [1, 2, 3].map(function (n) { return '<button type="button" data-img="' + n + '" aria-current="' + (n === 1) + '" aria-label="View image ' + n + '"><img src="' + imgSrc(p, n) + '" width="80" height="80" alt="" loading="lazy" decoding="async"></button>'; }).join('');
+    var thumbs = [1, 2, 3].map(function (n) { return '<button type="button" data-img="' + n + '" aria-current="' + (n === 1) + '" aria-label="View image ' + n + '"><img src="' + thumbSrc(p, n) + '" width="80" height="80" alt="" loading="lazy" decoding="async"></button>'; }).join('');
     var tier = function (l, notes) { return '<div class="pyramid__tier"><small>' + l + '</small><span>' + esc(notes.join(' · ')) + '</span></div>'; };
     var revs = REVIEWS.filter(function (r) { return r.productId === p.id; });
     var related = PRODUCTS.filter(function (x) { return x.id !== p.id && (x.family === p.family || x.collection === p.collection); }).sort(function (a, b) { return (b.family === p.family) - (a.family === p.family); }).slice(0, 4);
@@ -412,7 +416,7 @@
     initTabs(root);
     root.addEventListener('click', function (e) {
       var q = $('[data-qty-input]', root), b = e.target.closest('[data-img], [data-qinc], [data-qdec], #buy-now'); if (!b) return;
-      if (b.hasAttribute('data-img')) { $('.gallery__main img').src = imgSrc(p, b.getAttribute('data-img')); $$('[data-img]', root).forEach(function (x) { x.setAttribute('aria-current', x === b); }); }
+      if (b.hasAttribute('data-img')) { var gn = Number(b.getAttribute('data-img')), gi = $('.gallery__main img'), gs = $('.gallery__main source'); if (gs) gs.srcset = webpSrc(p, gn); gi.src = imgSrc(p, gn); gi.classList.toggle('is-photo', isPhoto(p, gn)); $$('[data-img]', root).forEach(function (x) { x.setAttribute('aria-current', x === b); }); }
       else if (b.hasAttribute('data-qinc')) q.value = Math.min(Number(q.max), Number(q.value) + 1);
       else if (b.hasAttribute('data-qdec')) q.value = Math.max(1, Number(q.value) - 1);
       else if (b.id === 'buy-now') { addToCart(p.id, root.getAttribute('data-ml'), Number(q.value) || 1); closeDrawer(); location.href = 'cart.html'; }

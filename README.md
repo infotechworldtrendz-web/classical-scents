@@ -67,6 +67,16 @@ All artwork is SVG so you can see the layout now. Swap in photos with the same b
 
 Set explicit `width`/`height` on any new `<img>` to keep layout shift at zero.
 
+### Real product photos
+
+Products with real photos use a `photos` list in `js/products.js`, for example `photos: ['royal-1.png', 'royal-2.jpg', 'royal-3.jpg']`:
+
+- `-1.png` is the studio cut-out on a transparent background (card and main gallery image).
+- `-2.jpg` is the lifestyle shot (shown when hovering a card).
+- `-3.jpg` is a second angle or close-up.
+
+Put a `.webp` copy with the same name next to each file; the site serves WebP first and falls back to PNG/JPG. Royal, Queen, Alpha and Divine use real photos. Products 5 to 16 are demo items with drawn bottles: replace or delete them when your other perfumes are photographed.
+
 ## Deploy to GitHub Pages
 
 1. Create a repository and push this folder to the `main` branch.

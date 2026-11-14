@@ -23,11 +23,11 @@ var BRAND = {
 };
 
 var COLLECTIONS = [
-  { slug: 'signature',    name: 'Signature',      tagline: 'The house classics. Wearable, polished, unmistakable.',  image: 'images/collection-signature.svg' },
-  { slug: 'prive',        name: 'Privé',          tagline: 'Limited, intense and dressed for the evening.',          image: 'images/collection-prive.svg' },
+  { slug: 'signature',    name: 'Signature',      tagline: 'The house classics. Wearable, polished, unmistakable.',  image: 'images/collection-signature.jpg' },
+  { slug: 'prive',        name: 'Privé',          tagline: 'Limited, intense and dressed for the evening.',          image: 'images/collection-prive.jpg' },
   { slug: 'oud-attar',    name: 'Oud & Attar',    tagline: 'Pure oils and deep woods, in the old tradition.',        image: 'images/collection-oud-attar.svg' },
   { slug: 'fresh-citrus', name: 'Fresh & Citrus', tagline: 'Cold-pressed brightness for forty-degree days.',         image: 'images/collection-fresh-citrus.svg' },
-  { slug: 'gift-sets',    name: 'Gift Sets',      tagline: 'Curated sets, boxed, wrapped and ready to give.',        image: 'images/collection-gift-sets.svg' }
+  { slug: 'gift-sets',    name: 'Gift Sets',      tagline: 'Curated sets, boxed, wrapped and ready to give.',        image: 'images/collection-gift-sets.jpg' }
 ];
 
 /* gender: men | women | unisex   collection: see COLLECTIONS   type: extrait | attar
@@ -35,46 +35,48 @@ var COLLECTIONS = [
    badges: bestseller | new | restocked   (Sold Out and -X% are computed from stock / prices)
    occasions: daily | office | evening | wedding     moods: fresh | warm | bold | soft */
 var PRODUCTS = [
+  /* ---- Real Classical Scents bottles (photographed). Notes, prices and stock are demo values: edit before launch. ---- */
   {
-    id: 1, slug: 'aurum-oud', name: 'Aurum Oud', gender: 'men', collection: 'oud-attar', type: 'extrait', family: 'Woody',
-    topNotes: ['Saffron', 'Pink Pepper', 'Bergamot'], heartNotes: ['Cambodian Oud', 'Rose', 'Cedar'], baseNotes: ['Amber', 'Vanilla', 'Sandalwood'],
-    keyNotes: ['Oud', 'Amber', 'Vanilla'], longevity: 14, sillage: 4,
-    sizes: [{ ml: 30, price: 2950, originalPrice: null }, { ml: 50, price: 4450, originalPrice: 5550 }, { ml: 100, price: 7450, originalPrice: 8950 }],
-    badges: ['bestseller'], rating: 4.8, reviewCount: 212, stock: 24,
-    description: 'A dense, smoky oud softened by rose and warmed by amber as the evening wears on. Built for Karachi nights, long dinners and the kind of handshake people remember.',
-    howToWear: 'Two sprays on the neck and one on the chest before you dress. Let it settle for ten minutes; the rose steps forward and the smoke steps back.',
-    occasions: ['evening', 'wedding'], moods: ['bold', 'warm'], image: 'aurum-oud'
+    id: 1, slug: 'royal', name: 'Royal', gender: 'unisex', collection: 'prive', type: 'extrait', family: 'Oriental',
+    topNotes: ['Saffron', 'Bergamot', 'Pink Pepper'], heartNotes: ['Oud', 'Rose', 'Cedar'], baseNotes: ['Amber', 'Vanilla', 'Musk'],
+    keyNotes: ['Saffron', 'Oud', 'Amber'], longevity: 14, sillage: 4,
+    sizes: [{ ml: 30, price: 2950, originalPrice: null }, { ml: 50, price: 4450, originalPrice: 5250 }, { ml: 100, price: 6950, originalPrice: null }],
+    badges: ['bestseller'], rating: 4.9, reviewCount: 236, stock: 32,
+    description: 'Saffron and smoky oud poured over golden amber, in a bottle that fades from black to honey. Royal is the scent you wear when the evening matters and you intend to be remembered.',
+    howToWear: 'Two sprays on the neck and one on the chest. Let it settle for ten minutes; the oud softens and the amber stays for the rest of the night.',
+    occasions: ['evening', 'wedding'], moods: ['bold', 'warm'], image: 'royal', photos: ['royal-1.png', 'royal-2.jpg', 'royal-3.jpg']
   },
   {
-    id: 2, slug: 'noor', name: 'Noor', gender: 'women', collection: 'signature', type: 'extrait', family: 'Floral',
-    topNotes: ['Bergamot', 'Pear', 'Pink Pepper'], heartNotes: ['Tuberose', 'Jasmine', 'Orange Blossom'], baseNotes: ['White Musk', 'Sandalwood', 'Tonka'],
-    keyNotes: ['Tuberose', 'Pear', 'White Musk'], longevity: 10, sillage: 3,
-    sizes: [{ ml: 30, price: 2650, originalPrice: null }, { ml: 50, price: 3950, originalPrice: null }, { ml: 100, price: 6450, originalPrice: null }],
-    badges: [], rating: 4.7, reviewCount: 168, stock: 40,
-    description: 'Luminous white florals opening on crisp pear and settling into a clean, skin-like musk. Noor is the one you reach for when you want to feel put together before you leave the house.',
-    howToWear: 'Spray on pulse points and once through the hair. Pairs beautifully with the Rose Attar Absolue on the wrists for evenings.',
-    occasions: ['daily', 'office'], moods: ['soft', 'fresh'], image: 'noor'
+    id: 2, slug: 'queen', name: 'Queen', gender: 'women', collection: 'signature', type: 'extrait', family: 'Floral',
+    topNotes: ['Raspberry', 'Pink Pepper', 'Mandarin'], heartNotes: ['Rose', 'Peony', 'Jasmine'], baseNotes: ['Vanilla', 'White Musk', 'Sandalwood'],
+    keyNotes: ['Rose', 'Raspberry', 'Vanilla'], longevity: 10, sillage: 3,
+    sizes: [{ ml: 30, price: 2650, originalPrice: null }, { ml: 50, price: 3950, originalPrice: null }, { ml: 100, price: 6250, originalPrice: null }],
+    badges: ['new'], rating: 4.8, reviewCount: 118, stock: 40,
+    description: 'Juicy raspberry and pink pepper open onto a bouquet of rose and peony, softened by vanilla musk. Bright, feminine and confident, like its rose-to-sapphire bottle.',
+    howToWear: 'Spray on wrists, neck and the hem of a dupatta. Two sprays are plenty for daytime; add one more for an evening event.',
+    occasions: ['wedding', 'daily'], moods: ['soft', 'bold'], image: 'queen', photos: ['queen-1.png', 'queen-2.jpg', 'queen-3.jpg']
   },
   {
-    id: 3, slug: 'saffron-royale', name: 'Saffron Royale', gender: 'unisex', collection: 'prive', type: 'extrait', family: 'Oriental',
-    topNotes: ['Saffron', 'Cardamom', 'Bergamot'], heartNotes: ['Iris', 'Turkish Rose', 'Clove'], baseNotes: ['Amber', 'Benzoin', 'Vetiver'],
-    keyNotes: ['Saffron', 'Rose', 'Amber'], longevity: 12, sillage: 4,
-    sizes: [{ ml: 30, price: 3200, originalPrice: null }, { ml: 50, price: 4950, originalPrice: null }, { ml: 100, price: 7950, originalPrice: null }],
-    badges: ['bestseller'], rating: 4.9, reviewCount: 143, stock: 18,
-    description: 'Saffron threads steeped in rose and iris, drying down to a resinous golden amber. Royale is the signature of someone who never needs to raise their voice.',
-    howToWear: 'One spray is enough for an office day; three for a shaadi. Apply to clothing for the longest trail.',
-    occasions: ['wedding', 'evening'], moods: ['warm', 'bold'], image: 'saffron-royale'
+    id: 3, slug: 'alpha', name: 'Alpha', gender: 'men', collection: 'signature', type: 'extrait', family: 'Woody',
+    topNotes: ['Bergamot', 'Black Pepper', 'Cardamom'], heartNotes: ['Lavender', 'Vetiver', 'Geranium'], baseNotes: ['Cedarwood', 'Amberwood', 'Tonka'],
+    keyNotes: ['Pepper', 'Vetiver', 'Cedarwood'], longevity: 12, sillage: 3,
+    sizes: [{ ml: 30, price: 2650, originalPrice: null }, { ml: 50, price: 3950, originalPrice: 4650 }, { ml: 100, price: 6250, originalPrice: null }],
+    badges: ['bestseller'], rating: 4.8, reviewCount: 204, stock: 45,
+    description: 'Peppered bergamot and cardamom over a dry heart of vetiver and lavender, finishing on polished cedar and amberwood. A sharp, grown-up signature for the office and well beyond it.',
+    howToWear: 'Two sprays on the collar and one on the back of the neck. It projects cleanly for the first hours, then sits close and woody into the evening.',
+    occasions: ['office', 'daily', 'evening'], moods: ['bold', 'fresh'], image: 'alpha', photos: ['alpha-1.png', 'alpha-2.jpg', 'alpha-3.jpg']
   },
   {
-    id: 4, slug: 'citrus-veil', name: 'Citrus Veil', gender: 'unisex', collection: 'fresh-citrus', type: 'extrait', family: 'Citrus',
-    topNotes: ['Sicilian Lemon', 'Grapefruit', 'Mint'], heartNotes: ['Neroli', 'Green Tea', 'Petitgrain'], baseNotes: ['White Musk', 'Cedar', 'Ambrette'],
-    keyNotes: ['Lemon', 'Green Tea', 'Cedar'], longevity: 7, sillage: 2,
-    sizes: [{ ml: 30, price: 2450, originalPrice: null }, { ml: 50, price: 3450, originalPrice: null }, { ml: 100, price: 5450, originalPrice: null }],
-    badges: ['new'], rating: 4.6, reviewCount: 54, stock: 60,
-    description: 'A cold-pressed burst of lemon and grapefruit over cool green tea, drying down to clean cedar. The first morning of a holiday, bottled for forty-degree afternoons.',
-    howToWear: 'Generous sprays after a shower, and keep the 30ml in your bag for a 4pm refresh.',
-    occasions: ['daily', 'office'], moods: ['fresh'], image: 'citrus-veil'
+    id: 4, slug: 'divine', name: 'Divine', gender: 'unisex', collection: 'signature', type: 'extrait', family: 'Amber',
+    topNotes: ['Pear', 'Mandarin', 'Neroli'], heartNotes: ['Orange Blossom', 'Jasmine', 'Honey'], baseNotes: ['Vanilla', 'Sandalwood', 'Benzoin'],
+    keyNotes: ['Honey', 'Orange Blossom', 'Vanilla'], longevity: 11, sillage: 3,
+    sizes: [{ ml: 30, price: 2850, originalPrice: null }, { ml: 50, price: 4250, originalPrice: null }, { ml: 100, price: 6750, originalPrice: null }],
+    badges: ['new'], rating: 4.8, reviewCount: 97, stock: 38,
+    description: 'Golden honey and orange blossom glowing over creamy sandalwood and vanilla, as warm as the liquid in its clear glass. Soft enough for every day, rich enough to be noticed.',
+    howToWear: 'Spray on pulse points and once on a scarf or shawl. Divine clings to fabric beautifully, so you will still catch it the next morning.',
+    occasions: ['daily', 'evening'], moods: ['warm', 'soft'], image: 'divine', photos: ['divine-1.png', 'divine-2.jpg', 'divine-3.jpg']
   },
+  /* ---- Demo products below: replace with your other perfumes when photos are ready. ---- */
   {
     id: 5, slug: 'midnight-musk', name: 'Midnight Musk', gender: 'men', collection: 'signature', type: 'extrait', family: 'Musky',
     topNotes: ['Black Pepper', 'Lavender', 'Bergamot'], heartNotes: ['Geranium', 'Orris', 'Nutmeg'], baseNotes: ['Black Musk', 'Patchouli', 'Amberwood'],
@@ -200,29 +202,29 @@ var PRODUCTS = [
 /* Gift sets / bundles. items reference product ids; price is the set price, compareAt is the
    sum of the pieces bought separately (used for the "Save X%" badge). */
 var BUNDLES = [
-  { id: 'bundle-discovery', slug: 'discovery-set', name: 'Discovery Set', subtitle: 'Six 10ml travel sprays', items: [1, 3, 5, 12, 16, 2],
-    price: 4950, compareAt: 6500, image: 'images/bundle-discovery.svg', stock: 40,
-    description: 'Six of our most-loved extraits in 10ml sprays, boxed in black and gold. The right way to find your signature before committing to a full bottle.' },
-  { id: 'bundle-oud-trio', slug: 'oud-trio', name: 'The Oud Trio', subtitle: 'Aurum Oud 50ml, Oud Mystique 12ml, Rose Attar Absolue 12ml', items: [1, 13, 6],
-    price: 8950, compareAt: 10850, image: 'images/bundle-oud-trio.svg', stock: 12,
-    description: 'Three expressions of oud and rose: a smoky extrait and two pure attars. Our most-gifted set for Eid and weddings.' },
-  { id: 'bundle-duo', slug: 'his-and-hers-duo', name: 'His & Hers Duo', subtitle: 'Midnight Musk 50ml and Noor 50ml', items: [5, 2],
-    price: 6750, compareAt: 7900, image: 'images/bundle-duo.svg', stock: 25,
-    description: 'A dark musk for him and a luminous white floral for her, boxed together with a handwritten card. The anniversary gift that gets used every day.' }
+  { id: 'bundle-discovery', slug: 'signature-four', name: 'The Signature Four', subtitle: 'Alpha, Queen, Divine and Royal in 10ml sprays', items: [3, 2, 4, 1],
+    price: 3950, compareAt: 4950, image: 'images/bundle-discovery.jpg', stock: 40,
+    description: 'All four house signatures in 10ml travel sprays, boxed in black and gold. The easiest way to find yours before choosing a full bottle.' },
+  { id: 'bundle-oud-trio', slug: 'royal-divine-duo', name: 'Royal & Divine', subtitle: 'Royal 50ml and Divine 50ml', items: [1, 4],
+    price: 7650, compareAt: 8700, image: 'images/bundle-oud-trio.jpg', stock: 15,
+    description: 'Smoky saffron oud and golden honey amber, boxed together. Our most-gifted pairing for Eid and weddings.' },
+  { id: 'bundle-duo', slug: 'his-and-hers-duo', name: 'His & Hers Duo', subtitle: 'Alpha 50ml and Queen 50ml', items: [3, 2],
+    price: 6950, compareAt: 7900, image: 'images/bundle-duo.jpg', stock: 25,
+    description: 'A sharp woody signature for him and a rosy floral for her, boxed together with a handwritten card. The anniversary gift that gets used every day.' }
 ];
 
 /* productId must match the product the review talks about. featured reviews appear on the home page carousel. */
 var REVIEWS = [
-  { productId: 1,  name: 'Hamza R.',   city: 'Karachi',    rating: 5, featured: true,  quote: 'Wore Aurum Oud to my cousin’s valima and three people asked what it was before dinner. Still on my kurta the next morning.' },
+  { productId: 1,  name: 'Hamza R.',   city: 'Karachi',    rating: 5, featured: true,  quote: 'Wore Royal to my cousin\u2019s valima and three people asked what it was before dinner. Still on my kurta the next morning.' },
+  { productId: 2,  name: 'Mahnoor S.', city: 'Karachi',    rating: 5, featured: true,  quote: 'Queen is rosy, juicy and so feminine. I get compliments at work, and the pink-to-blue bottle looks stunning on my dresser.' },
+  { productId: 3,  name: 'Ahmed S.',   city: 'Islamabad',  rating: 5, featured: true,  quote: 'Alpha is my office scent now. Peppery and woody, never loud, and it lasts from morning meetings to dinner.' },
+  { productId: 4,  name: 'Ayesha K.',  city: 'Lahore',     rating: 5, featured: true,  quote: 'Divine smells expensive in the best way. Warm honey and vanilla that lingers on my scarf for days.' },
+  { productId: 8,  name: 'Usman T.',   city: 'Faisalabad', rating: 5, featured: false, quote: 'Sandal Noir is pure class. Creamy sandalwood with that smoky edge; waiting for the restock to buy a backup.' },
   { productId: 12, name: 'Sana M.',    city: 'Lahore',     rating: 5, featured: true,  quote: 'Vanilla Ember is cosy without being sweet. My husband keeps borrowing it, so I bought the 100ml.' },
-  { productId: 3,  name: 'Ayesha K.',  city: 'Islamabad',  rating: 5, featured: true,  quote: 'Saffron Royale smells expensive in the best way. The saffron opening is unreal and the amber lasts all day.' },
   { productId: 16, name: 'Bilal A.',   city: 'Rawalpindi', rating: 5, featured: true,  quote: 'Leather Saffron is my office scent now. Smooth suede, never loud, and the 50ml was delivered in two days.' },
-  { productId: 2,  name: 'Mahnoor S.', city: 'Karachi',    rating: 5, featured: true,  quote: 'Noor is clean, fresh and so easy to wear. I get compliments at work and it never gives me a headache.' },
-  { productId: 8,  name: 'Usman T.',   city: 'Faisalabad', rating: 5, featured: true,  quote: 'Sandal Noir is pure class. Creamy sandalwood with that smoky edge; waiting for the restock to buy a backup.' },
   { productId: 5,  name: 'Taha J.',    city: 'Hyderabad',  rating: 5, featured: false, quote: 'Midnight Musk lasts through a full shift and the drive home. Peppery, dark and exactly as described.' },
   { productId: 13, name: 'Fahad N.',   city: 'Peshawar',   rating: 5, featured: false, quote: 'One drop of Oud Mystique and nothing else is needed. Real oud depth, not the synthetic kind.' },
   { productId: 6,  name: 'Hira B.',    city: 'Multan',     rating: 5, featured: false, quote: 'Rose Attar Absolue is my wedding-season staple. Two roses, no sharpness, and it stays on the dupatta for days.' },
-  { productId: 4,  name: 'Zain Q.',    city: 'Karachi',    rating: 4, featured: false, quote: 'Citrus Veil is the freshest thing I own. Perfect for Karachi heat; I just wish the 30ml lasted a little longer.' },
   { productId: 7,  name: 'Rabia F.',   city: 'Sialkot',    rating: 5, featured: false, quote: 'Velvet Amber is warm, cinnamon-sweet and lasts beautifully on a shawl. Already planning the 100ml.' },
   { productId: 10, name: 'Ali H.',     city: 'Gujranwala', rating: 4, featured: false, quote: 'Ocean Marine feels like sea air. Light, salty and clean. Great value for a daily.' },
   { productId: 9,  name: 'Nimra A.',   city: 'Lahore',     rating: 5, featured: false, quote: 'Jasmine Sahar is soft and dewy, exactly what morning jasmine smells like. Lovely for the office.' },

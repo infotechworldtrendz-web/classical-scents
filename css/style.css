@@ -260,6 +260,7 @@ input[type="range"] { width: 100%; accent-color: var(--gold); }
 .card:hover .card__media { border-color: var(--line-gold); }
 .card__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 6%; transition: opacity .5s var(--ease), transform .8s var(--ease); }
 .card__media .card__alt { opacity: 0; }
+.card__media img.is-photo, .gallery__main img.is-photo, .quick__media img.is-photo { object-fit: cover; padding: 0; }
 .card:hover .card__media .card__alt { opacity: 1; }
 .card:hover .card__media .card__main { transform: scale(1.04); }
 .card__badges { position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; z-index: 2; }

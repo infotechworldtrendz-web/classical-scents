@@ -35,7 +35,7 @@
     .hero__cta .btn--gold{background:linear-gradient(135deg,#B8954F,#E6D3A3 45%,#C9A55C 60%,#A8863E);color:#0B0B0B;border-color:#B8954F}
     .hero__cta .btn--outline{border-color:var(--gold);color:var(--gold-pale)}
     .hero__bottle{width:min(86vw,380px);margin:0 auto;animation:float 7s ease-in-out infinite}
-    .hero__bottle svg{display:block;width:100%;height:auto}
+    .hero__bottle img{display:block;width:100%;height:auto}
     .sweep{transform-box:fill-box;transform-origin:center;animation:sweep 6s cubic-bezier(.4,0,.2,1) infinite}
     .hero__scroll{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:24px;height:40px;border:1px solid rgba(201,165,92,.5);border-radius:12px;display:block}
     .hero__scroll span{position:absolute;left:50%;top:8px;width:3px;height:8px;margin-left:-1.5px;border-radius:2px;background:var(--gold);animation:scrollDot 2s ease-in-out infinite}
@@ -44,7 +44,7 @@
     @keyframes sweep{0%{transform:translateX(-140%) skewX(-18deg)}45%,100%{transform:translateX(280%) skewX(-18deg)}}
     @keyframes scrollDot{0%{transform:translateY(0);opacity:1}100%{transform:translateY(14px);opacity:0}}
     @keyframes glow{from{opacity:.7}to{opacity:1}}
-    .hero.is-paused .hero__bottle,.hero.is-paused .sweep,.hero.is-paused .hero__glow{animation-play-state:paused}
+    .hero.is-paused .hero__bottle,.hero.is-paused .hero__glow{animation-play-state:paused}
     @media(min-width:768px){.hero__inner{padding-left:32px;padding-right:32px}}@media(min-width:900px){.hero__inner{grid-template-columns:1.1fr 1fr;padding-top:72px;padding-bottom:72px}.hero__bottle{width:min(42vw,560px);margin:0 0 0 auto}}@media(min-width:1200px){.hero__inner{padding-left:48px;padding-right:48px}}
     @media(prefers-reduced-motion:reduce){.hero__text>*,.hero__bottle,.hero__scroll span,.hero__glow{animation:none!important;opacity:1;transform:none}.hero__mist,.sweep{display:none}}
   </style>
@@ -144,94 +144,7 @@
         </div>
       </div>
       <div class="hero__bottle" aria-hidden="true">
-        <svg viewBox="0 0 800 800" width="560" height="560" xmlns="http://www.w3.org/2000/svg">
-<g transform="translate(40 150) scale(.62)" opacity=".92"><defs><linearGradient id="hbgl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".07" stop-color="#fff" stop-opacity=".06"/><stop offset=".5" stop-color="#fff" stop-opacity=".02"/><stop offset=".9" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity=".26"/></linearGradient>
-<linearGradient id="hblq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d79f59" stop-opacity=".82"/><stop offset=".55" stop-color="#c97f22" stop-opacity=".9"/><stop offset="1" stop-color="#5a390f" stop-opacity=".97"/></linearGradient>
-<linearGradient id="hblh" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".18" stop-color="#000" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".06"/><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient>
-<linearGradient id="hbbs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d79f59" stop-opacity=".55"/><stop offset=".6" stop-color="#c97f22" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient>
-<linearGradient id="hbcp" x1="0" x2="1"><stop offset="0" stop-color="#040404"/><stop offset="0.22" stop-color="#2c2c2c"/><stop offset="0.5" stop-color="#0e0e0e"/><stop offset="0.76" stop-color="#3a3a3a"/><stop offset="1" stop-color="#050505"/></linearGradient>
-<linearGradient id="hbcs" x1="0" x2="1"><stop offset="0" stop-color="#040404"/><stop offset="0.22" stop-color="#2c2c2c"/><stop offset="0.5" stop-color="#0e0e0e"/><stop offset="0.76" stop-color="#3a3a3a"/><stop offset="1" stop-color="#050505"/></linearGradient>
-<linearGradient id="hbco" x1="0" x2="1"><stop offset="0" stop-color="#5c4418"/><stop offset="0.14" stop-color="#a8863e"/><stop offset="0.34" stop-color="#f1e2b5"/><stop offset="0.52" stop-color="#c9a55c"/><stop offset="0.78" stop-color="#8a6a2c"/><stop offset="1" stop-color="#4f3a14"/></linearGradient>
-<linearGradient id="hbsp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".12" stop-color="#fff" stop-opacity=".7"/><stop offset=".8" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<linearGradient id="hbsw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<filter id="hbbl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter></defs>
-<ellipse cx="410" cy="732" rx="215" ry="22" fill="#000" opacity=".55" filter="url(#hbbl)"/>
-<polygon points="490,372 580,346 580,692 490,722" fill="#c97f22" fill-opacity=".2" stroke="#fff" stroke-opacity=".22"/>
-<polygon points="500,398 568,368 568,644 500,672" fill="#6f4613" fill-opacity=".75"/>
-<polygon points="500,422 568,392 568,396 500,426" fill="#fff" fill-opacity=".3"/>
-<path d="M574 354V684" stroke="#fff" stroke-opacity=".5" stroke-width="3"/>
-<polygon points="490,372 580,346 580,348 490,374" fill="#fff" fill-opacity=".45"/>
-<rect x="210" y="372" width="280" height="350" rx="18" fill="url(#hbgl)" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/>
-<rect x="232" y="420" width="236" height="250" rx="8" fill="url(#hblq)"/>
-<rect x="232" y="420" width="236" height="250" rx="8" fill="url(#hblh)"/>
-<rect x="234" y="418" width="232" height="4" rx="2" fill="#fff" opacity=".38"/>
-<rect x="212" y="670" width="276" height="50" rx="16" fill="url(#hbbs)"/>
-<rect x="220" y="390" width="9" height="312" rx="4.5" fill="url(#hbsp)" opacity=".9"/>
-<rect x="250" y="402" width="26" height="250" rx="13" fill="url(#hbsp)" opacity=".14"/>
-<rect x="252" y="466" width="196" height="150" rx="2" fill="#0c0a07" fill-opacity=".84" stroke="#C9A55C" stroke-opacity=".9"/>
-<rect x="260" y="474" width="180" height="134" fill="none" stroke="#C9A55C" stroke-opacity=".45"/>
-<text x="350" y="502" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="11" letter-spacing="4" fill="#E6D3A3">CLASSICAL SCENTS</text>
-<path d="M332 513H368" stroke="#C9A55C" stroke-opacity=".7"/>
-<text x="350" y="546" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="25" font-weight="600" fill="#F2EDE4">Velvet Amber</text>
-<text x="350" y="570" text-anchor="middle" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="8.5" letter-spacing="3" fill="#C9A55C">EXTRAIT DE PARFUM</text>
-<text x="350" y="592" text-anchor="middle" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="8.5" letter-spacing="2" fill="#9A9388">50 ML · 1.7 FL.OZ</text>
-<polygon points="352,330 412,330 436,322 376,322" fill="#fff" fill-opacity=".12"/>
-<rect x="352" y="330" width="60" height="44" fill="#c97f22" fill-opacity=".3" stroke="#fff" stroke-opacity=".18"/>
-<rect x="336" y="306" width="92" height="28" rx="3" fill="url(#hbco)"/>
-<polygon points="428,306 452,298 452,326 428,334" fill="#5c4418"/>
-<polygon points="300,150 330,136 470,136 440,150" fill="url(#hbcs)" opacity=".9"/>
-<polygon points="300,150 330,136 470,136 440,150" fill="#fff" opacity=".2"/>
-<rect x="300" y="150" width="140" height="160" rx="5" fill="url(#hbcp)"/>
-<polygon points="440,150 470,136 470,296 440,310" fill="url(#hbcs)"/>
-<polygon points="440,150 470,136 470,296 440,310" fill="#000" opacity=".35"/>
-
-<rect x="318" y="156" width="8" height="148" rx="4" fill="#fff" opacity=".16"/>
-<text x="370" y="244" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="32" font-weight="600" fill="#C9A55C" fill-opacity="0.75">CS</text></g>
-<g transform="translate(110 40) scale(.9)"><defs><linearGradient id="hagl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".07" stop-color="#fff" stop-opacity=".06"/><stop offset=".5" stop-color="#fff" stop-opacity=".02"/><stop offset=".9" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity=".26"/></linearGradient>
-<linearGradient id="halq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b38f5b" stop-opacity=".82"/><stop offset=".55" stop-color="#9a6a24" stop-opacity=".9"/><stop offset="1" stop-color="#453010" stop-opacity=".97"/></linearGradient>
-<linearGradient id="halh" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".18" stop-color="#000" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".06"/><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient>
-<linearGradient id="habs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b38f5b" stop-opacity=".55"/><stop offset=".6" stop-color="#9a6a24" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient>
-<linearGradient id="hacp" x1="0" x2="1"><stop offset="0" stop-color="#5c4418"/><stop offset="0.14" stop-color="#a8863e"/><stop offset="0.34" stop-color="#f1e2b5"/><stop offset="0.52" stop-color="#c9a55c"/><stop offset="0.78" stop-color="#8a6a2c"/><stop offset="1" stop-color="#4f3a14"/></linearGradient>
-<linearGradient id="hacs" x1="0" x2="1"><stop offset="0" stop-color="#5c4418"/><stop offset="0.14" stop-color="#a8863e"/><stop offset="0.34" stop-color="#f1e2b5"/><stop offset="0.52" stop-color="#c9a55c"/><stop offset="0.78" stop-color="#8a6a2c"/><stop offset="1" stop-color="#4f3a14"/></linearGradient>
-<linearGradient id="haco" x1="0" x2="1"><stop offset="0" stop-color="#5c4418"/><stop offset="0.14" stop-color="#a8863e"/><stop offset="0.34" stop-color="#f1e2b5"/><stop offset="0.52" stop-color="#c9a55c"/><stop offset="0.78" stop-color="#8a6a2c"/><stop offset="1" stop-color="#4f3a14"/></linearGradient>
-<linearGradient id="hasp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".12" stop-color="#fff" stop-opacity=".7"/><stop offset=".8" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<linearGradient id="hasw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<filter id="habl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter><clipPath id="haclip"><rect x="230" y="372" width="340" height="350" rx="22"/></clipPath></defs>
-<ellipse cx="400" cy="730" rx="205" ry="20" fill="#000" opacity=".55" filter="url(#habl)"/>
-<ellipse cx="400" cy="726" rx="150" ry="9" fill="#9a6a24" opacity=".35" filter="url(#habl)"/>
-<rect x="372" y="330" width="56" height="48" fill="#9a6a24" fill-opacity=".3" stroke="#fff" stroke-opacity=".18"/>
-<rect x="230" y="372" width="340" height="350" rx="22" fill="url(#hagl)" stroke="#fff" stroke-opacity=".28" stroke-width="1.5"/>
-<rect x="254" y="396" width="292" height="274" rx="10" fill="#fff" fill-opacity=".03" stroke="#fff" stroke-opacity=".14"/>
-<rect x="254" y="422" width="292" height="248" rx="8" fill="url(#halq)"/>
-<rect x="254" y="422" width="292" height="248" rx="8" fill="url(#halh)"/>
-<rect x="256" y="420" width="288" height="4" rx="2" fill="#fff" opacity=".38"/>
-<rect x="232" y="380" width="22" height="292" fill="#9a6a24" fill-opacity=".22"/>
-<rect x="546" y="380" width="22" height="292" fill="#9a6a24" fill-opacity=".28"/>
-<rect x="232" y="670" width="336" height="50" rx="18" fill="url(#habs)"/>
-<path d="M252 671H548" stroke="#fff" stroke-opacity=".4"/>
-<path d="M250 719H550" stroke="#fff" stroke-opacity=".25"/>
-<rect x="241" y="390" width="9" height="312" rx="4.5" fill="url(#hasp)" opacity=".85"/>
-<rect x="553" y="398" width="4" height="296" rx="2" fill="url(#hasp)" opacity=".55"/>
-<rect x="268" y="404" width="30" height="250" rx="15" fill="url(#hasp)" opacity=".14"/>
-<path d="M254 374H546" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
-<rect x="295" y="466" width="210" height="150" rx="2" fill="#0c0a07" fill-opacity=".84" stroke="#C9A55C" stroke-opacity=".9"/>
-<rect x="303" y="474" width="194" height="134" fill="none" stroke="#C9A55C" stroke-opacity=".45"/>
-<text x="400" y="502" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="11" letter-spacing="4" fill="#E6D3A3">CLASSICAL SCENTS</text>
-<path d="M382 513H418" stroke="#C9A55C" stroke-opacity=".7"/>
-<text x="400" y="546" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="30" font-weight="600" fill="#F2EDE4">Aurum Oud</text>
-<text x="400" y="570" text-anchor="middle" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="8.5" letter-spacing="3" fill="#C9A55C">EXTRAIT DE PARFUM</text>
-<text x="400" y="592" text-anchor="middle" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="8.5" letter-spacing="2" fill="#9A9388">50 ML · 1.7 FL.OZ</text>
-<g clip-path="url(#haclip)"><rect class="sweep" x="230" y="360" width="120" height="380" fill="url(#hasw)"/></g>
-<rect x="352" y="310" width="96" height="28" rx="3" fill="url(#haco)"/>
-<path d="M352 317H448M352 331H448" stroke="#000" stroke-opacity=".25"/>
-<rect x="316" y="146" width="168" height="168" rx="7" fill="url(#hacp)"/>
-<rect x="316" y="146" width="168" height="12" rx="6" fill="#fff" opacity=".22"/>
-<path d="M318 164H482M318 171H482M318 178H482M318 185H482M318 192H482M318 199H482M318 206H482M318 213H482M318 220H482M318 227H482M318 234H482M318 241H482M318 248H482M318 255H482M318 262H482M318 269H482M318 276H482M318 283H482M318 290H482M318 297H482M318 304H482" stroke="#fff" stroke-opacity="0.07" stroke-width=".8"/>
-<rect x="316" y="146" width="18" height="168" rx="7" fill="#000" opacity=".18"/>
-<rect x="466" y="146" width="18" height="168" rx="7" fill="#000" opacity=".25"/>
-<rect x="340" y="152" width="8" height="156" rx="4" fill="#fff" opacity="0.18"/>
-<text x="400" y="244" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="36" font-weight="600" fill="#4a3610" fill-opacity="0.5">CS</text></g>
-</svg>
+        <picture><source type="image/webp" srcset="images/hero-bottles.webp"><img src="images/hero-bottles.png" width="1000" height="1000" alt="" fetchpriority="high" decoding="async"></picture>
       </div>
     </div>
     <a class="hero__scroll" href="#trust" aria-label="Scroll to explore"><span></span></a>
@@ -278,11 +191,11 @@
         <h2 id="coll-title">Five ways to be remembered</h2>
       </div>
       <div class="collections">
-        <a class="coll reveal" href="shop.html?collection=signature"><img src="images/collection-signature.svg" width="600" height="800" alt="Signature collection bottle in dark gold light" loading="lazy" decoding="async"><div class="coll__text"><h3>Signature</h3><p>The house classics</p></div></a>
-        <a class="coll reveal" href="shop.html?collection=prive"><img src="images/collection-prive.svg" width="600" height="800" alt="Privé collection bottle against black velvet" loading="lazy" decoding="async"><div class="coll__text"><h3>Privé</h3><p>Limited and intense</p></div></a>
+        <a class="coll reveal" href="shop.html?collection=signature"><img src="images/collection-signature.jpg" width="600" height="800" alt="Signature collection bottle in dark gold light" loading="lazy" decoding="async"><div class="coll__text"><h3>Signature</h3><p>The house classics</p></div></a>
+        <a class="coll reveal" href="shop.html?collection=prive"><img src="images/collection-prive.jpg" width="600" height="800" alt="Privé collection bottle against black velvet" loading="lazy" decoding="async"><div class="coll__text"><h3>Privé</h3><p>Limited and intense</p></div></a>
         <a class="coll reveal" href="shop.html?collection=oud-attar"><img src="images/collection-oud-attar.svg" width="600" height="800" alt="Oud and attar oil bottle" loading="lazy" decoding="async"><div class="coll__text"><h3>Oud &amp; Attar</h3><p>Pure oils, deep woods</p></div></a>
         <a class="coll reveal" href="shop.html?collection=fresh-citrus"><img src="images/collection-fresh-citrus.svg" width="600" height="800" alt="Fresh and citrus collection bottle" loading="lazy" decoding="async"><div class="coll__text"><h3>Fresh &amp; Citrus</h3><p>Cold-pressed brightness</p></div></a>
-        <a class="coll coll--wide reveal" href="shop.html?collection=gift-sets"><img src="images/collection-gift-sets.svg" width="600" height="800" alt="Gift set box with three bottles" loading="lazy" decoding="async"><div class="coll__text"><h3>Gift Sets</h3><p>Boxed and ready to give</p></div></a>
+        <a class="coll coll--wide reveal" href="shop.html?collection=gift-sets"><img src="images/collection-gift-sets.jpg" width="600" height="800" alt="Gift set box with three bottles" loading="lazy" decoding="async"><div class="coll__text"><h3>Gift Sets</h3><p>Boxed and ready to give</p></div></a>
       </div>
     </div>
   </section>
@@ -337,9 +250,9 @@
         <h2 id="gender-title">For him, for her, for everyone</h2>
       </div>
       <div class="genders">
-        <a class="gender reveal" href="shop.html?gender=men"><img src="images/gender-men.svg" width="600" height="750" alt="Dark bottle for men" loading="lazy" decoding="async"><span class="gender__label"><h3>Men</h3><span>Woods, musk, leather</span></span></a>
-        <a class="gender reveal" href="shop.html?gender=women"><img src="images/gender-women.svg" width="600" height="750" alt="Pale gold bottle for women" loading="lazy" decoding="async"><span class="gender__label"><h3>Women</h3><span>Florals, amber, rose</span></span></a>
-        <a class="gender reveal" href="shop.html?gender=unisex"><img src="images/gender-unisex.svg" width="600" height="750" alt="Amber bottle for everyone" loading="lazy" decoding="async"><span class="gender__label"><h3>Unisex</h3><span>Citrus, oud, vanilla</span></span></a>
+        <a class="gender reveal" href="shop.html?gender=men"><img src="images/gender-men.jpg" width="600" height="750" alt="Alpha bottle for men" loading="lazy" decoding="async"><span class="gender__label"><h3>Men</h3><span>Woods, musk, leather</span></span></a>
+        <a class="gender reveal" href="shop.html?gender=women"><img src="images/gender-women.jpg" width="600" height="750" alt="Queen bottle for women" loading="lazy" decoding="async"><span class="gender__label"><h3>Women</h3><span>Florals, amber, rose</span></span></a>
+        <a class="gender reveal" href="shop.html?gender=unisex"><img src="images/gender-unisex.jpg" width="600" height="750" alt="Divine bottle for everyone" loading="lazy" decoding="async"><span class="gender__label"><h3>Unisex</h3><span>Citrus, oud, vanilla</span></span></a>
       </div>
     </div>
   </section>
@@ -347,7 +260,7 @@
   <!-- Story -->
   <section class="section" aria-labelledby="story-title">
     <div class="container story">
-      <div class="story__media reveal"><img src="images/about-1.svg" width="600" height="750" alt="Perfumer's bench with glass vials and a brass scale" loading="lazy" decoding="async"></div>
+      <div class="story__media reveal"><img src="images/about-1.jpg" width="600" height="750" alt="Alpha, Queen, Divine and Royal bottles in a row" loading="lazy" decoding="async"></div>
       <div class="reveal">
         <p class="eyebrow">Our Craft</p>
         <h2 id="story-title">The Art of Classical Perfumery</h2>
@@ -399,12 +312,12 @@
         <h2 id="insta-title"><a class="link" href="https://instagram.com/classicalscents" target="_blank" rel="noopener">Follow @classicalscents</a></h2>
       </div>
       <div class="insta">
-        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Aurum Oud on a marble tray"><img src="images/insta-1.svg" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
-        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Rose petals and attar vial"><img src="images/insta-2.svg" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
-        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Gift set unboxing"><img src="images/insta-3.svg" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
-        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Citrus Veil by the sea"><img src="images/insta-4.svg" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
-        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Saffron threads close up"><img src="images/insta-5.svg" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
-        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: The atelier in Karachi"><img src="images/insta-6.svg" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
+        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Alpha by the window"><img src="images/products/alpha-2.webp" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
+        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Queen on the desk"><img src="images/products/queen-2.webp" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
+        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Royal in the studio"><img src="images/products/royal-3.webp" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
+        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Divine in morning light"><img src="images/products/divine-2.webp" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
+        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Royal by the window"><img src="images/products/royal-2.webp" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
+        <a href="https://instagram.com/classicalscents" target="_blank" rel="noopener" aria-label="Instagram post: Divine close up"><img src="images/products/divine-3.webp" width="400" height="400" alt="" loading="lazy" decoding="async"></a>
       </div>
     </div>
   </section>
