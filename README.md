@@ -75,7 +75,7 @@ Products with real photos use a `photos` list in `js/products.js`, for example `
 - `-2.jpg` is the lifestyle shot (shown when hovering a card).
 - `-3.jpg` is a second angle or close-up.
 
-Put a `.webp` copy with the same name next to each file; the site serves WebP first and falls back to PNG/JPG. Royal, Queen, Alpha and Divine use real photos. Products 5 to 16 are demo items with drawn bottles: replace or delete them when your other perfumes are photographed.
+Put a `.webp` copy with the same name next to each file; the site serves WebP first and falls back to PNG/JPG. Royal, Queen, Alpha and Divine use real photos. Add your other perfumes as new entries with ids 5, 6 and 7.
 
 ## Deploy to GitHub Pages
 

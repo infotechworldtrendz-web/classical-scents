@@ -25,8 +25,6 @@ var BRAND = {
 var COLLECTIONS = [
   { slug: 'signature',    name: 'Signature',      tagline: 'The house classics. Wearable, polished, unmistakable.',  image: 'images/collection-signature.jpg' },
   { slug: 'prive',        name: 'Privé',          tagline: 'Limited, intense and dressed for the evening.',          image: 'images/collection-prive.jpg' },
-  { slug: 'oud-attar',    name: 'Oud & Attar',    tagline: 'Pure oils and deep woods, in the old tradition.',        image: 'images/collection-oud-attar.svg' },
-  { slug: 'fresh-citrus', name: 'Fresh & Citrus', tagline: 'Cold-pressed brightness for forty-degree days.',         image: 'images/collection-fresh-citrus.svg' },
   { slug: 'gift-sets',    name: 'Gift Sets',      tagline: 'Curated sets, boxed, wrapped and ready to give.',        image: 'images/collection-gift-sets.jpg' }
 ];
 
@@ -75,127 +73,6 @@ var PRODUCTS = [
     description: 'Golden honey and orange blossom glowing over creamy sandalwood and vanilla, as warm as the liquid in its clear glass. Soft enough for every day, rich enough to be noticed.',
     howToWear: 'Spray on pulse points and once on a scarf or shawl. Divine clings to fabric beautifully, so you will still catch it the next morning.',
     occasions: ['daily', 'evening'], moods: ['warm', 'soft'], image: 'divine', photos: ['divine-1.png', 'divine-2.jpg', 'divine-3.jpg']
-  },
-  /* ---- Demo products below: replace with your other perfumes when photos are ready. ---- */
-  {
-    id: 5, slug: 'midnight-musk', name: 'Midnight Musk', gender: 'men', collection: 'signature', type: 'extrait', family: 'Musky',
-    topNotes: ['Black Pepper', 'Lavender', 'Bergamot'], heartNotes: ['Geranium', 'Orris', 'Nutmeg'], baseNotes: ['Black Musk', 'Patchouli', 'Amberwood'],
-    keyNotes: ['Black Musk', 'Pepper', 'Amberwood'], longevity: 11, sillage: 3,
-    sizes: [{ ml: 30, price: 2650, originalPrice: null }, { ml: 50, price: 3950, originalPrice: 4650 }, { ml: 100, price: 6450, originalPrice: null }],
-    badges: [], rating: 4.7, reviewCount: 189, stock: 35,
-    description: 'Dark, velvety musk sharpened with pepper and lavender, finishing on a long mineral amberwood. Confident on a shirt collar at nine in the morning and still there at midnight.',
-    howToWear: 'Two sprays on the collar and one on the back of the neck. Avoid rubbing the wrists together; it flattens the pepper.',
-    occasions: ['daily', 'evening', 'office'], moods: ['bold', 'warm'], image: 'midnight-musk'
-  },
-  {
-    id: 6, slug: 'rose-attar-absolue', name: 'Rose Attar Absolue', gender: 'women', collection: 'oud-attar', type: 'attar', family: 'Floral',
-    topNotes: ['Taif Rose', 'Pink Pepper'], heartNotes: ['Damask Rose', 'Geranium', 'Saffron'], baseNotes: ['Sandalwood', 'Musk', 'Amber'],
-    keyNotes: ['Taif Rose', 'Saffron', 'Sandalwood'], longevity: 16, sillage: 3,
-    sizes: [{ ml: 12, price: 2950, originalPrice: null }, { ml: 24, price: 4950, originalPrice: null }],
-    badges: [], rating: 4.9, reviewCount: 97, stock: 15,
-    description: 'An oil attar built around two roses, bright Taif on top and deep Damask underneath, resting on creamy sandalwood. A single drop on the wrist lasts through the day and into the next morning.',
-    howToWear: 'Attars are oil-based: dab one drop on each wrist and behind the ears. Never spray, never rub.',
-    occasions: ['wedding', 'daily'], moods: ['soft', 'warm'], image: 'rose-attar-absolue'
-  },
-  {
-    id: 7, slug: 'velvet-amber', name: 'Velvet Amber', gender: 'women', collection: 'prive', type: 'extrait', family: 'Amber',
-    topNotes: ['Mandarin', 'Saffron', 'Cinnamon'], heartNotes: ['Orchid', 'Labdanum', 'Jasmine'], baseNotes: ['Amber', 'Vanilla', 'Sandalwood'],
-    keyNotes: ['Amber', 'Cinnamon', 'Vanilla'], longevity: 12, sillage: 4,
-    sizes: [{ ml: 30, price: 2950, originalPrice: null }, { ml: 50, price: 4650, originalPrice: null }, { ml: 100, price: 7450, originalPrice: null }],
-    badges: ['new'], rating: 4.8, reviewCount: 61, stock: 22,
-    description: 'Molten amber and vanilla wrapped in cinnamon-spiced mandarin, soft as the inside of a velvet box. Warm enough for a winter shawl and polished enough for a December wedding.',
-    howToWear: 'Spray on the inside of a shawl or dupatta as well as the skin; the amber clings to fabric for days.',
-    occasions: ['wedding', 'evening'], moods: ['warm', 'soft'], image: 'velvet-amber'
-  },
-  {
-    id: 8, slug: 'sandal-noir', name: 'Sandal Noir', gender: 'men', collection: 'signature', type: 'extrait', family: 'Woody',
-    topNotes: ['Cardamom', 'Bergamot', 'Violet Leaf'], heartNotes: ['Mysore Sandalwood', 'Cedar', 'Iris'], baseNotes: ['Vetiver', 'Tonka', 'Incense'],
-    keyNotes: ['Sandalwood', 'Cardamom', 'Incense'], longevity: 12, sillage: 3,
-    sizes: [{ ml: 30, price: 2850, originalPrice: null }, { ml: 50, price: 4250, originalPrice: null }, { ml: 100, price: 6950, originalPrice: null }],
-    badges: ['bestseller'], rating: 4.8, reviewCount: 231, stock: 0,
-    description: 'Creamy sandalwood turned sombre with incense and vetiver, cut by a flash of cardamom on top. The office signature that quietly outlasts everyone else’s.',
-    howToWear: 'Two sprays on the chest under a shirt. It projects gently and lasts a full working day.',
-    occasions: ['office', 'daily'], moods: ['warm', 'bold'], image: 'sandal-noir'
-  },
-  {
-    id: 9, slug: 'jasmine-sahar', name: 'Jasmine Sahar', gender: 'women', collection: 'signature', type: 'extrait', family: 'Floral',
-    topNotes: ['Green Mandarin', 'Pear', 'Lily of the Valley'], heartNotes: ['Sambac Jasmine', 'Peony', 'Rose'], baseNotes: ['Musk', 'Cashmeran', 'Cedar'],
-    keyNotes: ['Jasmine', 'Peony', 'Musk'], longevity: 9, sillage: 3,
-    sizes: [{ ml: 30, price: 2650, originalPrice: null }, { ml: 50, price: 3950, originalPrice: null }, { ml: 100, price: 6450, originalPrice: null }],
-    badges: ['new'], rating: 4.6, reviewCount: 38, stock: 30,
-    description: 'Sambac jasmine at dawn, dewy and green, carried on soft musk and cashmere woods. Light enough for a Karachi summer and pretty enough to earn compliments on the stairs.',
-    howToWear: 'Spray lightly on the neck and wrists in the morning. Reapply once in the afternoon for a fresh lift.',
-    occasions: ['daily', 'office'], moods: ['fresh', 'soft'], image: 'jasmine-sahar'
-  },
-  {
-    id: 10, slug: 'ocean-marine', name: 'Ocean Marine', gender: 'men', collection: 'fresh-citrus', type: 'extrait', family: 'Aquatic',
-    topNotes: ['Sea Salt', 'Bergamot', 'Mint'], heartNotes: ['Marine Accord', 'Sage', 'Geranium'], baseNotes: ['Driftwood', 'Ambergris', 'Musk'],
-    keyNotes: ['Sea Salt', 'Sage', 'Driftwood'], longevity: 8, sillage: 3,
-    sizes: [{ ml: 30, price: 2450, originalPrice: null }, { ml: 50, price: 3650, originalPrice: 4250 }, { ml: 100, price: 5950, originalPrice: null }],
-    badges: ['restocked'], rating: 4.5, reviewCount: 122, stock: 45,
-    description: 'Salt air, cold bergamot and a mineral marine note that reads like a Clifton breeze. Fresh enough for the gym bag and polished enough for a Friday lunch.',
-    howToWear: 'Spray freely on the chest and forearms. Best from a 20cm distance so the salt note stays airy.',
-    occasions: ['daily', 'office'], moods: ['fresh'], image: 'ocean-marine'
-  },
-  {
-    id: 11, slug: 'smoky-vetiver', name: 'Smoky Vetiver', gender: 'men', collection: 'prive', type: 'extrait', family: 'Green',
-    topNotes: ['Grapefruit', 'Pink Pepper', 'Juniper'], heartNotes: ['Haitian Vetiver', 'Cypress', 'Nutmeg'], baseNotes: ['Smoked Wood', 'Leather', 'Oakmoss'],
-    keyNotes: ['Vetiver', 'Grapefruit', 'Leather'], longevity: 11, sillage: 3,
-    sizes: [{ ml: 30, price: 3200, originalPrice: null }, { ml: 50, price: 4950, originalPrice: null }, { ml: 100, price: 7950, originalPrice: null }],
-    badges: ['restocked'], rating: 4.7, reviewCount: 76, stock: 12,
-    description: 'Rooty vetiver smoked over cypress and leather, lifted by bitter grapefruit. Dry, grown-up and quietly unusual: the scent of a tailor who never advertises.',
-    howToWear: 'Spray on the neck and the lapel of a jacket. Skip the wrists; vetiver reads best from a little distance.',
-    occasions: ['office', 'evening'], moods: ['bold', 'fresh'], image: 'smoky-vetiver'
-  },
-  {
-    id: 12, slug: 'vanilla-ember', name: 'Vanilla Ember', gender: 'unisex', collection: 'signature', type: 'extrait', family: 'Gourmand',
-    topNotes: ['Bergamot', 'Rum Accord', 'Cardamom'], heartNotes: ['Bourbon Vanilla', 'Tonka', 'Orris'], baseNotes: ['Benzoin', 'Amber', 'Smoky Woods'],
-    keyNotes: ['Bourbon Vanilla', 'Rum', 'Benzoin'], longevity: 13, sillage: 4,
-    sizes: [{ ml: 30, price: 2850, originalPrice: null }, { ml: 50, price: 4250, originalPrice: 4950 }, { ml: 100, price: 6950, originalPrice: null }],
-    badges: ['bestseller'], rating: 4.9, reviewCount: 304, stock: 50,
-    description: 'Dark bourbon vanilla warmed by rum and embers, sweet without ever turning sugary. Our most-complimented scent, and the one that gets borrowed from the dresser.',
-    howToWear: 'Two sprays on the chest and one in the hair. Layer under Aurum Oud for the deepest winter trail.',
-    occasions: ['evening', 'daily'], moods: ['warm', 'soft'], image: 'vanilla-ember'
-  },
-  {
-    id: 13, slug: 'oud-mystique', name: 'Oud Mystique', gender: 'unisex', collection: 'oud-attar', type: 'attar', family: 'Oud',
-    topNotes: ['Saffron', 'Dried Fruits'], heartNotes: ['Assam Oud', 'Rose', 'Patchouli'], baseNotes: ['Sandalwood', 'Amber', 'Musk'],
-    keyNotes: ['Assam Oud', 'Saffron', 'Rose'], longevity: 18, sillage: 5,
-    sizes: [{ ml: 12, price: 3450, originalPrice: null }, { ml: 24, price: 5950, originalPrice: null }],
-    badges: ['restocked'], rating: 4.8, reviewCount: 88, stock: 10,
-    description: 'A pure, slow-burning oud attar with dried fruits and rose folded into the smoke. One drop, no spray, and the room knows you have arrived.',
-    howToWear: 'Dab a single drop on the wrists and chest. It is potent: start with less than you think you need.',
-    occasions: ['wedding', 'evening'], moods: ['bold', 'warm'], image: 'oud-mystique'
-  },
-  {
-    id: 14, slug: 'green-fig', name: 'Green Fig', gender: 'unisex', collection: 'fresh-citrus', type: 'extrait', family: 'Green',
-    topNotes: ['Fig Leaf', 'Bergamot', 'Blackcurrant'], heartNotes: ['Fig Milk', 'Coconut', 'Jasmine'], baseNotes: ['Cedar', 'Musk', 'Sandalwood'],
-    keyNotes: ['Fig Leaf', 'Coconut', 'Cedar'], longevity: 8, sillage: 2,
-    sizes: [{ ml: 30, price: 2650, originalPrice: null }, { ml: 50, price: 3950, originalPrice: null }, { ml: 100, price: 6450, originalPrice: null }],
-    badges: ['new'], rating: 4.6, reviewCount: 29, stock: 38,
-    description: 'Crushed fig leaves, milky fig fruit and a whisper of coconut over soft cedar. Shaded, cool and faintly Mediterranean: a garden in the middle of the city.',
-    howToWear: 'Spray on the neck and the inside of the elbows. Wears close to the skin and is safe for the office.',
-    occasions: ['daily', 'office'], moods: ['fresh', 'soft'], image: 'green-fig'
-  },
-  {
-    id: 15, slug: 'rani-bouquet', name: 'Rani Bouquet', gender: 'women', collection: 'signature', type: 'extrait', family: 'Floral',
-    topNotes: ['Raspberry', 'Bergamot', 'Pink Pepper'], heartNotes: ['Rose', 'Peony', 'Lychee'], baseNotes: ['Patchouli', 'Musk', 'Amber'],
-    keyNotes: ['Rose', 'Raspberry', 'Patchouli'], longevity: 9, sillage: 3,
-    sizes: [{ ml: 30, price: 2650, originalPrice: null }, { ml: 50, price: 3950, originalPrice: 4650 }, { ml: 100, price: 6450, originalPrice: null }],
-    badges: ['restocked'], rating: 4.7, reviewCount: 154, stock: 28,
-    description: 'A ruby-red bouquet of rose and peony, juicy with raspberry and lychee and grounded by patchouli. Pretty, modern and made for mehndi season.',
-    howToWear: 'Spray on wrists, neck and the hem of a dupatta. Two sprays are plenty for a daytime event.',
-    occasions: ['wedding', 'daily'], moods: ['soft', 'bold'], image: 'rani-bouquet'
-  },
-  {
-    id: 16, slug: 'leather-saffron', name: 'Leather Saffron', gender: 'men', collection: 'prive', type: 'extrait', family: 'Leather',
-    topNotes: ['Saffron', 'Bergamot', 'Thyme'], heartNotes: ['Suede', 'Iris', 'Oud'], baseNotes: ['Leather', 'Amber', 'Vetiver'],
-    keyNotes: ['Saffron', 'Suede', 'Leather'], longevity: 14, sillage: 4,
-    sizes: [{ ml: 30, price: 3200, originalPrice: null }, { ml: 50, price: 4950, originalPrice: null }, { ml: 100, price: 7950, originalPrice: null }],
-    badges: ['bestseller'], rating: 4.8, reviewCount: 119, stock: 16,
-    description: 'Saffron laid over supple suede and a trace of oud, drying to a warm, polished leather. The scent of a well-worn jacket and a very good watch.',
-    howToWear: 'One spray on the neck and one on the jacket collar. It is strong; let it bloom for fifteen minutes before judging.',
-    occasions: ['evening', 'office'], moods: ['bold', 'warm'], image: 'leather-saffron'
   }
 ];
 
@@ -219,18 +96,10 @@ var REVIEWS = [
   { productId: 2,  name: 'Mahnoor S.', city: 'Karachi',    rating: 5, featured: true,  quote: 'Queen is rosy, juicy and so feminine. I get compliments at work, and the pink-to-blue bottle looks stunning on my dresser.' },
   { productId: 3,  name: 'Ahmed S.',   city: 'Islamabad',  rating: 5, featured: true,  quote: 'Alpha is my office scent now. Peppery and woody, never loud, and it lasts from morning meetings to dinner.' },
   { productId: 4,  name: 'Ayesha K.',  city: 'Lahore',     rating: 5, featured: true,  quote: 'Divine smells expensive in the best way. Warm honey and vanilla that lingers on my scarf for days.' },
-  { productId: 8,  name: 'Usman T.',   city: 'Faisalabad', rating: 5, featured: false, quote: 'Sandal Noir is pure class. Creamy sandalwood with that smoky edge; waiting for the restock to buy a backup.' },
-  { productId: 12, name: 'Sana M.',    city: 'Lahore',     rating: 5, featured: true,  quote: 'Vanilla Ember is cosy without being sweet. My husband keeps borrowing it, so I bought the 100ml.' },
-  { productId: 16, name: 'Bilal A.',   city: 'Rawalpindi', rating: 5, featured: true,  quote: 'Leather Saffron is my office scent now. Smooth suede, never loud, and the 50ml was delivered in two days.' },
-  { productId: 5,  name: 'Taha J.',    city: 'Hyderabad',  rating: 5, featured: false, quote: 'Midnight Musk lasts through a full shift and the drive home. Peppery, dark and exactly as described.' },
-  { productId: 13, name: 'Fahad N.',   city: 'Peshawar',   rating: 5, featured: false, quote: 'One drop of Oud Mystique and nothing else is needed. Real oud depth, not the synthetic kind.' },
-  { productId: 6,  name: 'Hira B.',    city: 'Multan',     rating: 5, featured: false, quote: 'Rose Attar Absolue is my wedding-season staple. Two roses, no sharpness, and it stays on the dupatta for days.' },
-  { productId: 7,  name: 'Rabia F.',   city: 'Sialkot',    rating: 5, featured: false, quote: 'Velvet Amber is warm, cinnamon-sweet and lasts beautifully on a shawl. Already planning the 100ml.' },
-  { productId: 10, name: 'Ali H.',     city: 'Gujranwala', rating: 4, featured: false, quote: 'Ocean Marine feels like sea air. Light, salty and clean. Great value for a daily.' },
-  { productId: 9,  name: 'Nimra A.',   city: 'Lahore',     rating: 5, featured: false, quote: 'Jasmine Sahar is soft and dewy, exactly what morning jasmine smells like. Lovely for the office.' },
-  { productId: 14, name: 'Omar L.',    city: 'Islamabad',  rating: 5, featured: false, quote: 'Green Fig is unusual and cool, like fig leaves after rain. Nobody at my office has anything like it.' },
-  { productId: 15, name: 'Sadia R.',   city: 'Karachi',    rating: 5, featured: false, quote: 'Rani Bouquet is juicy and rosy and got me compliments at every mehndi this season.' },
-  { productId: 11, name: 'Daniyal M.', city: 'Quetta',     rating: 5, featured: false, quote: 'Smoky Vetiver is dry, grown-up and completely different from the usual sweet stuff. Lasts about ten hours on me.' }
+  { productId: 1,  name: 'Bilal A.',   city: 'Rawalpindi', rating: 5, featured: true,  quote: 'Royal is the only perfume I have bought twice. The saffron opening is unreal and the amber lasts well past midnight.' },
+  { productId: 2,  name: 'Sana M.',    city: 'Lahore',     rating: 5, featured: true,  quote: 'Queen is my wedding-season scent. Sweet without being childish, and it stays on my dupatta all evening.' },
+  { productId: 3,  name: 'Taha J.',    city: 'Hyderabad',  rating: 5, featured: false, quote: 'Alpha lasts through a full shift and the drive home. Clean, woody and exactly as described.' },
+  { productId: 4,  name: 'Hira B.',    city: 'Multan',     rating: 4, featured: false, quote: 'Divine is soft, warm and honeyed. I wish the 30ml were a little bigger because I reach for it every day.' },
 ];
 
 /* Data validation: runs once on load and reports problems in the console without breaking the page. */

@@ -290,8 +290,8 @@
   function initHome() {
     if (!$('#home')) return;
     initHero();
-    var sets = { bestsellers: 'bestseller', new: 'new', restocked: 'restocked' };
-    Object.keys(sets).forEach(function (k) { var el = $('#panel-' + k + ' .grid'); if (el) renderGrid(el, PRODUCTS.filter(function (p) { return p.badges.indexOf(sets[k]) > -1; }).slice(0, 4)); });
+    var sets = { bestsellers: 'bestseller', new: 'new', all: '' };
+    Object.keys(sets).forEach(function (k) { var el = $('#panel-' + k + ' .grid'); if (el) renderGrid(el, PRODUCTS.filter(function (p) { return !sets[k] || p.badges.indexOf(sets[k]) > -1; }).slice(0, 4)); });
     var bu = $('#bundles'); if (bu) bu.innerHTML = BUNDLES.map(bundleCard).join('');
     var rv = $('#reviews-track');
     if (rv) {
@@ -332,7 +332,7 @@
       var g = st.gender.length === 1 ? st.gender[0] : '', c = st.collection.length === 1 ? COLLECTIONS.filter(function (x) { return x.slug === st.collection[0]; })[0] : null;
       var t = st.wishlist ? 'Your Wishlist' : st.type === 'attar' ? 'Attars' : c ? c.name : g ? { men: 'Men’s Fragrances', women: 'Women’s Fragrances', unisex: 'Unisex Fragrances' }[g] : 'All Fragrances';
       $('#shop-title').textContent = t; $('#crumb-current').textContent = t; document.title = t + ' | Classical Scents';
-      $('#shop-lead').textContent = st.wishlist ? 'Everything you have saved, in one place.' : c ? c.tagline : st.type === 'attar' ? 'Pure oil attars. One drop, all day.' : 'Extraits and attars, composed in Karachi and delivered nationwide.';
+      $('#shop-lead').textContent = st.wishlist ? 'Everything you have saved, in one place.' : c ? c.tagline : st.type === 'attar' ? 'Pure oil attars. One drop, all day.' : 'Extrait de parfum, composed in Karachi and delivered nationwide.';
     }
     function apply() {
       var gift = st.collection.length === 1 && st.collection[0] === 'gift-sets';
@@ -393,7 +393,7 @@
     var thumbs = [1, 2, 3].map(function (n) { return '<button type="button" data-img="' + n + '" aria-current="' + (n === 1) + '" aria-label="View image ' + n + '"><img src="' + thumbSrc(p, n) + '" width="80" height="80" alt="" loading="lazy" decoding="async"></button>'; }).join('');
     var tier = function (l, notes) { return '<div class="pyramid__tier"><small>' + l + '</small><span>' + esc(notes.join(' · ')) + '</span></div>'; };
     var revs = REVIEWS.filter(function (r) { return r.productId === p.id; });
-    var related = PRODUCTS.filter(function (x) { return x.id !== p.id && (x.family === p.family || x.collection === p.collection); }).sort(function (a, b) { return (b.family === p.family) - (a.family === p.family); }).slice(0, 4);
+    var related = PRODUCTS.filter(function (x) { return x.id !== p.id; }).sort(function (a, b) { return (b.family === p.family) - (a.family === p.family); }).slice(0, 4);
     root.setAttribute('data-id', p.id); root.setAttribute('data-ml', s.ml);
     root.innerHTML = '<div class="gallery"><div class="gallery__main">' + picture(p, 1, '', p.name + ' ' + kind.toLowerCase() + ' bottle', true) + '<div class="card__badges">' + badges(p) + '</div></div><div class="gallery__thumbs">' + thumbs + '</div></div>' +
       '<div class="pinfo"><p class="eyebrow">' + esc(p.family) + ' • ' + kind + '</p><h1>' + esc(p.name) + '</h1><p class="pinfo__fam">' + { men: 'For Men', women: 'For Women', unisex: 'Unisex' }[p.gender] + ' • ' + esc(COLLECTIONS.filter(function (c) { return c.slug === p.collection; })[0].name) + ' Collection</p>' +
