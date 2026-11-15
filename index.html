@@ -21,7 +21,7 @@
     /* Critical CSS: tokens + hero, so the first fold paints before style.css arrives. */
     :root{--bg:#0B0B0B;--gold:#C9A55C;--gold-pale:#E6D3A3;--text:#F2EDE4;--muted:#9A9388;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
     html{-webkit-text-size-adjust:100%}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}
-    .announce{min-height:38px}.header{min-height:72px}
+    .announce{min-height:38px}.header{min-height:72px}.logo img{display:block;height:44px;width:auto}
     .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:#0B0B0B radial-gradient(ellipse 55% 60% at 72% 52%,rgba(201,165,92,.13),transparent 70%)}
     .hero__mist{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
     .hero__glow{position:absolute;inset:0;background:radial-gradient(circle at 75% 55%,rgba(201,165,92,.14),transparent 35%),radial-gradient(circle at 20% 85%,rgba(201,165,92,.06),transparent 40%);animation:glow 9s ease-in-out infinite alternate}
@@ -60,7 +60,7 @@
   <script src="js/products.js" defer></script>
   <script src="js/main.js" defer></script>
   <script type="application/ld+json">
-  [{"@context":"https://schema.org","@type":"Organization","name":"Classical Scents","url":"https://classicalscents.com/","logo":"https://classicalscents.com/images/favicon.svg","email":"hello@classicalscents.com","telephone":"+92 300 1234567","address":{"@type":"PostalAddress","streetAddress":"Shop 12, Zamzama Boulevard, DHA Phase 5","addressLocality":"Karachi","postalCode":"75500","addressCountry":"PK"},"sameAs":["https://instagram.com/classicalscents","https://facebook.com/classicalscents","https://tiktok.com/@classicalscents","https://youtube.com/@classicalscents"]},
+  [{"@context":"https://schema.org","@type":"Organization","name":"Classical Scents","url":"https://classicalscents.com/","logo":"https://classicalscents.com/images/logo.svg","email":"hello@classicalscents.com","telephone":"+92 300 1234567","address":{"@type":"PostalAddress","streetAddress":"Shop 12, Zamzama Boulevard, DHA Phase 5","addressLocality":"Karachi","postalCode":"75500","addressCountry":"PK"},"sameAs":["https://instagram.com/classicalscents","https://facebook.com/classicalscents","https://tiktok.com/@classicalscents","https://youtube.com/@classicalscents"]},
    {"@context":"https://schema.org","@type":"WebSite","name":"Classical Scents","url":"https://classicalscents.com/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://classicalscents.com/shop.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}]
   </script>
 </head>
@@ -75,7 +75,7 @@
     <button class="icon-btn header__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
-    <a class="logo" href="index.html" aria-label="Classical Scents home">CLASSICAL SCENTS</a>
+    <a class="logo" href="index.html" aria-label="Classical Scents home"><img src="images/logo.svg" width="159" height="44" alt="Classical Scents"></a>
     <nav class="nav" aria-label="Primary">
       <ul class="nav__list">
         <li><a href="shop.html">Shop</a></li>
@@ -107,7 +107,7 @@
 </header>
 <div class="mobile-menu" id="mobile-menu" hidden>
   <div class="mobile-menu__top">
-    <span class="logo">CLASSICAL SCENTS</span>
+    <span class="logo"><img src="images/logo.svg" width="159" height="44" alt="Classical Scents"></span>
     <button class="icon-btn" type="button" id="menu-close" aria-label="Close menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </div>
   <nav aria-label="Mobile">
@@ -345,7 +345,7 @@
 <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <p class="logo">CLASSICAL SCENTS</p>
+      <p class="logo logo--footer"><img src="images/logo.svg" width="260" height="72" alt="Classical Scents" loading="lazy"></p>
       <p>Extrait de parfum, composed and bottled in Karachi. Signatures for people who would rather be remembered than noticed.</p>
       <ul class="social" aria-label="Social media">
         <li><a class="icon-btn" href="https://facebook.com/classicalscents" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill:currentColor;stroke:none"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v2H6v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg></a></li>

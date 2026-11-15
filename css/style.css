@@ -764,3 +764,12 @@ h1 em, h2 em, h3 em { font-style: italic; background: var(--gold-grad); -webkit-
 .coll-block { padding-top: 96px; padding-bottom: 96px; }
 .faq summary { font-size: 1.5rem; padding: 24px 0; }
 .toast { border-radius: 0; letter-spacing: .04em; }
+
+
+/* Brand logo */
+.logo { display: inline-flex; align-items: center; letter-spacing: 0; }
+.logo img { display: block; height: 44px; width: auto; transition: height .3s var(--ease); }
+.header.is-scrolled .logo img { height: 36px; }
+.logo--footer img { height: 72px; }
+.footer__brand .logo--footer { margin: 0 0 20px; }
+@media (max-width: 479px) { .logo img { height: 34px; } .header.is-scrolled .logo img { height: 30px; } }
