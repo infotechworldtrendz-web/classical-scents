@@ -866,3 +866,16 @@ h1 em, h2 em, h3 em { font-style: italic; background: var(--gold-grad); -webkit-
 :root[data-theme="light"] .pyramid__tier { background: #FFFCF6; }
 :root[data-theme="light"] .pyramid__tier:nth-child(2) { background: #F4EDE1; }
 :root[data-theme="light"] .pyramid__tier:nth-child(3) { background: #EFE5D2; }
+
+/* ==========================================================================
+   ROUNDED IMAGE CORNERS
+   One radius for every product and photo frame; inner hairlines follow it.
+   ========================================================================== */
+:root { --img-r: 18px; --img-r-sm: 10px; }
+.card__media, .sig__media, .gallery__main, .quick__media, .story__media, .coll, .gender, .insta a, .map, .bundle,
+.coll-block__head img { border-radius: var(--img-r); overflow: hidden; }
+.bundle img { border-radius: var(--img-r) var(--img-r) 0 0; }
+.card__media::after, .sig__media::after, .coll::after, .gender::after, .story__media::after { border-radius: calc(var(--img-r) - 6px); }
+.gallery__thumbs button, .search__item img, .line img, .cart-page .line img { border-radius: var(--img-r-sm); overflow: hidden; }
+.card__actions .btn { border-radius: 999px; }
+.grid--list .card__media { border-radius: var(--img-r); }
