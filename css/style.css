@@ -773,3 +773,96 @@ h1 em, h2 em, h3 em { font-style: italic; background: var(--gold-grad); -webkit-
 .logo--footer img { height: 72px; }
 .footer__brand .logo--footer { margin: 0 0 20px; }
 @media (max-width: 479px) { .logo img { height: 34px; } .header.is-scrolled .logo img { height: 30px; } }
+
+/* ==========================================================================
+   LIGHT THEME  (html[data-theme="light"])
+   Warm ivory paper, deep ink text, deeper gold so small text keeps AA contrast.
+   Photo tiles that sit on dark imagery keep their dark-theme colours.
+   ========================================================================== */
+:root[data-theme="light"] {
+  --bg: #F6F1E8;
+  --surface: #FFFCF6;
+  --surface-2: #EEE6D8;
+  --line: #E0D5C2;
+  --line-gold: rgba(139, 107, 46, 0.3);
+  --gold: #765922;
+  --gold-soft: #6A4F1E;
+  --gold-pale: #5E461B;
+  --text: #1C1813;
+  --muted: #5F574B;
+  --danger: #A4442F;
+  --gold-grad: linear-gradient(135deg, #6E5220 0%, #A9853F 45%, #8B6B2E 60%, #5E4419 100%);
+  color-scheme: light;
+}
+:root[data-theme="light"] body { background: var(--bg); color: var(--text); }
+:root[data-theme="light"] body::after { opacity: .035; filter: invert(1); }
+
+/* Gold buttons keep the bright metallic face with ink text */
+:root[data-theme="light"] .btn--gold,
+:root[data-theme="light"] .hero__cta .btn--gold { background: linear-gradient(135deg, #B8954F, #E6D3A3 45%, #C9A55C 60%, #A8863E); color: #1C1813; border-color: #A8863E; }
+:root[data-theme="light"] .hero__cta .btn--outline { color: var(--gold-pale); border-color: rgba(139,107,46,.55); }
+:root[data-theme="light"] .btn--outline:hover { color: #FFFCF6; }
+:root[data-theme="light"] .btn--ghost { background: rgba(255,252,246,.92); border-color: var(--line); color: var(--text); }
+:root[data-theme="light"] .count,
+:root[data-theme="light"] .bundle__save,
+:root[data-theme="light"] .reviews__nav .icon-btn:hover,
+:root[data-theme="light"] ::selection { color: #FFFCF6; }
+
+/* Logo: deepen the bright gold so it reads on ivory */
+:root[data-theme="light"] .logo img { filter: brightness(.68) saturate(1.25); }
+
+/* Chrome */
+:root[data-theme="light"] .announce { background: #1C1813; color: #E6D3A3; border-bottom-color: transparent; }
+:root[data-theme="light"] .announce strong { color: #E6D3A3; }
+:root[data-theme="light"] .announce__close { color: #B8AE9E; }
+:root[data-theme="light"] .header { background: rgba(246,241,232,.55); }
+:root[data-theme="light"] .header.is-scrolled { background: rgba(246,241,232,.9); border-bottom-color: var(--line); }
+:root[data-theme="light"] .overlay,
+:root[data-theme="light"] .drawer-backdrop.is-open { background: rgba(28,24,19,.45); }
+:root[data-theme="light"] .sticky-buy { background: rgba(255,252,246,.96); }
+:root[data-theme="light"] .dialog::backdrop { background: rgba(28,24,19,.5); }
+
+/* Hero */
+:root[data-theme="light"] .hero { background: var(--bg) radial-gradient(ellipse 55% 60% at 72% 52%, rgba(201,165,92,.22), transparent 70%); }
+:root[data-theme="light"] .hero__glow { background: radial-gradient(circle at 75% 55%, rgba(201,165,92,.2), transparent 38%), radial-gradient(circle at 20% 85%, rgba(201,165,92,.1), transparent 40%); }
+:root[data-theme="light"] .hero__mist { mix-blend-mode: multiply; opacity: .5; }
+:root[data-theme="light"] .hero__word { -webkit-text-stroke-color: rgba(139,107,46,.18); }
+:root[data-theme="light"] .hero__title em { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; }
+:root[data-theme="light"] .hero__facts { background: rgba(255,252,246,.6); border-top-color: var(--line-gold); }
+:root[data-theme="light"] .hero__facts li + li { border-left-color: var(--line-gold); }
+:root[data-theme="light"] .hero__facts strong { color: var(--gold-pale); }
+
+/* Surfaces */
+:root[data-theme="light"] .section--surface { background: linear-gradient(180deg, #EFE8DC 0%, #F3EDE3 100%); border-color: var(--line); }
+:root[data-theme="light"] .marquee { background: #EFE8DC; }
+:root[data-theme="light"] .footer { background: #EDE5D7; }
+:root[data-theme="light"] .footer__mark { -webkit-text-stroke-color: rgba(139,107,46,.35); }
+
+/* Product stages: soft warm studio light */
+:root[data-theme="light"] .card__media { background: radial-gradient(ellipse at 50% 62%, #FFFFFF 0%, #F1EADD 58%, #E7DDCC 100%); }
+:root[data-theme="light"] .gallery__main,
+:root[data-theme="light"] .quick__media { background: radial-gradient(ellipse at 50% 60%, #FFFFFF 0%, #F1EADD 60%, #E7DDCC 100%); }
+:root[data-theme="light"] .sig__media { background: radial-gradient(circle at 50% 56%, color-mix(in srgb, var(--accent, #C9A55C) 26%, #FFFFFF) 0%, #F1EADD 62%), #EEE6D8; }
+:root[data-theme="light"] .sig__num { -webkit-text-stroke-color: rgba(139,107,46,.5); }
+:root[data-theme="light"] .search__item img,
+:root[data-theme="light"] .line img,
+:root[data-theme="light"] .gallery__thumbs button { background: #EEE6D8; }
+
+/* Tiles that sit on dark photography keep dark-theme text colours */
+:root[data-theme="light"] .coll,
+:root[data-theme="light"] .gender,
+:root[data-theme="light"] .insta a { --gold-pale: #E6D3A3; --muted: #B8AE9E; --text: #F2EDE4; --gold: #C9A55C; }
+
+/* Theme switch (footer) */
+.theme-switch { display: inline-flex; border: 1px solid var(--line-gold); }
+.theme-switch button { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 14px; font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); transition: background-color .25s, color .25s; }
+.theme-switch button svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+.theme-switch button:hover { color: var(--text); }
+.theme-switch button[aria-pressed="true"] { background: var(--gold); color: var(--bg); }
+.footer__bottom { row-gap: 20px; }
+
+/* light-solid-tints: solid fills instead of translucent gold tints */
+:root[data-theme="light"] .chip.is-active, :root[data-theme="light"] .chip[aria-checked="true"] { background: #EFE5D2; }
+:root[data-theme="light"] .pyramid__tier { background: #FFFCF6; }
+:root[data-theme="light"] .pyramid__tier:nth-child(2) { background: #F4EDE1; }
+:root[data-theme="light"] .pyramid__tier:nth-child(3) { background: #EFE5D2; }

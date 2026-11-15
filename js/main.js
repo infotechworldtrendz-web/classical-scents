@@ -452,9 +452,24 @@
     });
   }
 
+
+  /* ---------- colour theme ---------- */
+  function initTheme() {
+    var root = document.documentElement, meta = $('meta[name="theme-color"]');
+    function apply(t) {
+      if (t === 'light') root.setAttribute('data-theme', 'light'); else root.removeAttribute('data-theme');
+      if (meta) meta.content = t === 'light' ? '#F6F1E8' : '#0B0B0B';
+      $$('[data-theme-set]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-theme-set') === t); });
+    }
+    apply(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+    $$('[data-theme-set]').forEach(function (b) {
+      b.addEventListener('click', function () { var t = b.getAttribute('data-theme-set'); apply(t); store.set('cs_theme', t); });
+    });
+  }
+
   /* ---------- boot ---------- */
   document.documentElement.classList.remove('no-js');
-  initHeader(); initTabs(document); initCountUp(); initForms();
+  initTheme(); initHeader(); initTabs(document); initCountUp(); initForms();
   initHome(); initShop(); initProduct(); initCollections(); initReveal();
   renderCart(); updateCounts();
 })();
