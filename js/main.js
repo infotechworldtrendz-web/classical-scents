@@ -292,6 +292,17 @@
     initHero();
     var sets = { bestsellers: 'bestseller', new: 'new', all: '' };
     Object.keys(sets).forEach(function (k) { var el = $('#panel-' + k + ' .grid'); if (el) renderGrid(el, PRODUCTS.filter(function (p) { return !sets[k] || p.badges.indexOf(sets[k]) > -1; }).slice(0, 4)); });
+    var sg = $('#signatures');
+    if (sg) sg.innerHTML = PRODUCTS.map(function (p, i) {
+      var s = defSize(p), url = 'product.html?id=' + p.id, note = function (l, a) { return '<div><dt>' + l + '</dt><dd>' + esc(a.join(', ')) + '</dd></div>'; };
+      return '<article class="sig reveal" data-id="' + p.id + '" data-ml="' + s.ml + '" style="--accent:' + (p.accent || '#C9A55C') + '">' +
+        '<a class="sig__media" href="' + url + '" aria-label="View ' + esc(p.name) + '"><span class="sig__num" aria-hidden="true">' + ('0' + (i + 1)).slice(-2) + '</span>' + picture(p, 1, '', p.name + ' perfume bottle') + '</a>' +
+        '<div class="sig__body"><p class="eyebrow">' + esc(p.family) + ' • ' + { men: 'For Men', women: 'For Women', unisex: 'Unisex' }[p.gender] + '</p><h3 class="sig__name">' + esc(p.name) + '</h3><p class="sig__desc">' + esc(p.description) + '</p>' +
+        '<dl class="sig__notes">' + note('Top', p.topNotes) + note('Heart', p.heartNotes) + note('Base', p.baseNotes) + '</dl>' +
+        '<div class="sig__buy"><div data-price>' + priceHtml(s) + '</div><span class="sig__size">' + s.ml + 'ml • ' + p.longevity + '+ hrs</span></div>' +
+        '<div class="sig__cta"><a class="btn btn--gold" href="' + url + '">Discover ' + esc(p.name) + '</a>' +
+        (p.stock === 0 ? '<button type="button" class="btn btn--outline" data-notify="' + p.id + '">Notify Me</button>' : '<button type="button" class="btn btn--outline" data-add="' + p.id + '">Add to Cart</button>') + '</div></div></article>';
+    }).join('');
     var bu = $('#bundles'); if (bu) bu.innerHTML = BUNDLES.map(bundleCard).join('');
     var rv = $('#reviews-track');
     if (rv) {
@@ -443,7 +454,7 @@
 
   /* ---------- boot ---------- */
   document.documentElement.classList.remove('no-js');
-  initHeader(); initTabs(document); initReveal(); initCountUp(); initForms();
-  initHome(); initShop(); initProduct(); initCollections();
+  initHeader(); initTabs(document); initCountUp(); initForms();
+  initHome(); initShop(); initProduct(); initCollections(); initReveal();
   renderCart(); updateCounts();
 })();

@@ -22,36 +22,40 @@
     :root{--bg:#0B0B0B;--gold:#C9A55C;--gold-pale:#E6D3A3;--text:#F2EDE4;--muted:#9A9388;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
     html{-webkit-text-size-adjust:100%}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}
     .announce{min-height:38px}.header{min-height:72px}
-    .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:#0B0B0B radial-gradient(ellipse 60% 50% at 72% 50%,rgba(201,165,92,.1),transparent 70%)}
+    .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:#0B0B0B radial-gradient(ellipse 55% 60% at 72% 52%,rgba(201,165,92,.13),transparent 70%)}
     .hero__mist{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
     .hero__glow{position:absolute;inset:0;background:radial-gradient(circle at 75% 55%,rgba(201,165,92,.14),transparent 35%),radial-gradient(circle at 20% 85%,rgba(201,165,92,.06),transparent 40%);animation:glow 9s ease-in-out infinite alternate}
-    .hero__inner{position:relative;display:grid;gap:32px;padding:96px 20px 88px;width:100%;max-width:1280px;margin:0 auto;align-items:center;box-sizing:border-box}
-    .hero__text>*{opacity:0;transform:translateY(22px);animation:reveal .9s cubic-bezier(.22,1,.36,1) forwards}
-    .hero__eyebrow{animation-delay:.15s;display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 16px;font-weight:500}
-    .hero__title{animation-delay:.3s;font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,7vw,5rem);line-height:1.05;max-width:11ch;margin:0 0 24px;background:linear-gradient(135deg,#B8954F 0%,#E6D3A3 45%,#C9A55C 60%,#A8863E 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero__sub{animation-delay:.5s;color:var(--muted);font-size:1.05rem;max-width:44ch;margin:0 0 32px}
+    .hero__word{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(6rem,23vw,23rem);line-height:1;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(201,165,92,.12);pointer-events:none;user-select:none}
+    .hero__inner{position:relative;display:grid;gap:24px;padding:64px 20px 132px;width:100%;max-width:1280px;margin:0 auto;align-items:center;box-sizing:border-box}
+    .hero__text>*{opacity:0;transform:translateY(26px);animation:reveal 1s cubic-bezier(.22,1,.36,1) forwards}
+    .hero__eyebrow{animation-delay:.15s;display:flex;align-items:center;gap:14px;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:0 0 22px;font-weight:500}
+    .hero__eyebrow::before{content:"";width:44px;height:1px;background:var(--gold);flex:none}
+    .hero__title{animation-delay:.3s;font-family:var(--serif);font-weight:500;font-size:clamp(3.1rem,8vw,6.6rem);line-height:.98;letter-spacing:-.01em;margin:0 0 26px;color:var(--text)}
+    .hero__title em{font-style:italic;background:linear-gradient(135deg,#B8954F 0%,#E6D3A3 45%,#C9A55C 60%,#A8863E 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+    .hero__sub{animation-delay:.5s;color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:40ch;margin:0 0 36px}
     .hero__cta{animation-delay:.7s;display:flex;flex-wrap:wrap;gap:12px}
-    .hero__cta .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid transparent}
-    .hero__cta .btn--gold{background:linear-gradient(135deg,#B8954F,#E6D3A3 45%,#C9A55C 60%,#A8863E);color:#0B0B0B;border-color:#B8954F}
-    .hero__cta .btn--outline{border-color:var(--gold);color:var(--gold-pale)}
-    .hero__bottle{width:min(86vw,380px);margin:0 auto;animation:float 7s ease-in-out infinite}
+    .hero__cta .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 34px;font-size:.72rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;border:1px solid transparent}
+    .hero__cta .btn--gold{background:linear-gradient(135deg,#B8954F 0%,#E6D3A3 45%,#C9A55C 60%,#A8863E 100%);color:#0B0B0B;border-color:#B8954F}
+    .hero__cta .btn--outline{border-color:rgba(201,165,92,.55);color:var(--gold-pale)}
+    .hero__bottle{width:min(84vw,400px);margin:0 auto;animation:float 7s ease-in-out infinite}
     .hero__bottle img{display:block;width:100%;height:auto}
-    .sweep{transform-box:fill-box;transform-origin:center;animation:sweep 6s cubic-bezier(.4,0,.2,1) infinite}
-    .hero__scroll{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:24px;height:40px;border:1px solid rgba(201,165,92,.5);border-radius:12px;display:block}
-    .hero__scroll span{position:absolute;left:50%;top:8px;width:3px;height:8px;margin-left:-1.5px;border-radius:2px;background:var(--gold);animation:scrollDot 2s ease-in-out infinite}
+    .hero__facts{position:absolute;left:0;right:0;bottom:0;margin:0;padding:0 12px;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(201,165,92,.22);background:rgba(11,11,11,.55)}
+    .hero__facts li{padding:16px 6px;text-align:center;font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+    .hero__facts li+li{border-left:1px solid rgba(201,165,92,.16)}
+    .hero__facts strong{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(1.4rem,3vw,2.2rem);letter-spacing:.02em;text-transform:none;line-height:1.1;margin-bottom:4px;color:var(--gold-pale)}
     @keyframes reveal{to{opacity:1;transform:none}}
     @keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-16px) rotate(1deg)}}
-    @keyframes sweep{0%{transform:translateX(-140%) skewX(-18deg)}45%,100%{transform:translateX(280%) skewX(-18deg)}}
-    @keyframes scrollDot{0%{transform:translateY(0);opacity:1}100%{transform:translateY(14px);opacity:0}}
     @keyframes glow{from{opacity:.7}to{opacity:1}}
     .hero.is-paused .hero__bottle,.hero.is-paused .hero__glow{animation-play-state:paused}
-    @media(min-width:768px){.hero__inner{padding-left:32px;padding-right:32px}}@media(min-width:900px){.hero__inner{grid-template-columns:1.1fr 1fr;padding-top:72px;padding-bottom:72px}.hero__bottle{width:min(42vw,560px);margin:0 0 0 auto}}@media(min-width:1200px){.hero__inner{padding-left:48px;padding-right:48px}}
-    @media(prefers-reduced-motion:reduce){.hero__text>*,.hero__bottle,.hero__scroll span,.hero__glow{animation:none!important;opacity:1;transform:none}.hero__mist,.sweep{display:none}}
+    @media(min-width:768px){.hero__inner{padding-left:32px;padding-right:32px}.hero__facts li{font-size:.62rem;letter-spacing:.22em;padding:20px 8px}}
+    @media(min-width:900px){.hero__inner{grid-template-columns:1.15fr 1fr;padding-top:48px;padding-bottom:150px}.hero__bottle{width:min(44vw,600px);margin:0 0 0 auto}}
+    @media(min-width:1200px){.hero__inner{padding-left:48px;padding-right:48px}}
+    @media(prefers-reduced-motion:reduce){.hero__text>*,.hero__bottle,.hero__glow{animation:none!important;opacity:1;transform:none}.hero__mist{display:none}}
   </style>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/products.js" defer></script>
   <script src="js/main.js" defer></script>
@@ -131,10 +135,11 @@
   <section class="hero" id="hero" aria-labelledby="hero-title">
     <canvas class="hero__mist" id="mist" width="640" height="400" aria-hidden="true"></canvas>
     <div class="hero__glow" aria-hidden="true"></div>
+    <p class="hero__word" aria-hidden="true">Classical</p>
     <div class="hero__inner">
       <div class="hero__text">
         <p class="hero__eyebrow">Extrait de Parfum • Made in Pakistan</p>
-        <h1 class="hero__title" id="hero-title">Wear a Signature, Not a Scent</h1>
+        <h1 class="hero__title" id="hero-title">Wear a <em>Signature</em>, Not a Scent</h1>
         <p class="hero__sub">Long-wearing extrait de parfum, composed in Karachi and delivered to your door anywhere in Pakistan.</p>
         <div class="hero__cta">
           <a class="btn btn--gold" href="shop.html?sort=rating">Shop Bestsellers</a>
@@ -145,39 +150,29 @@
         <picture><source type="image/webp" srcset="images/hero-bottles.webp"><img src="images/hero-bottles.png" width="1000" height="1000" alt="" fetchpriority="high" decoding="async"></picture>
       </div>
     </div>
-    <a class="hero__scroll" href="#trust" aria-label="Scroll to explore"><span></span></a>
-  </section>
-
-  <!-- Trust strip -->
-  <section class="trust" id="trust" aria-label="Why Classical Scents">
-    <ul class="container trust__list">
-      <li class="trust__item"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="17" r="11"/><path d="M16 10v7l4 3M13 3h6"/></svg>12+ Hr Longevity</li>
-      <li class="trust__item"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3s-9 10-9 17a9 9 0 0 0 18 0c0-7-9-17-9-17z"/><path d="M12 20a4 4 0 0 0 4 4"/></svg>Extrait Concentration</li>
-      <li class="trust__item"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27C5 15 13 7 27 5c-1 14-9 22-22 22z"/><path d="M5 27 19 13"/></svg>Cruelty-Free</li>
-      <li class="trust__item"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 9h17v13H3zM20 13h6l3 4v5h-9z"/><circle cx="8" cy="24" r="2.5"/><circle cx="24" cy="24" r="2.5"/></svg>Fast Nationwide Delivery</li>
-      <li class="trust__item"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 5 7v9c0 7 5 11 11 13 6-2 11-6 11-13V7z"/><path d="m11 16 3 3 7-7"/></svg>100% Authentic</li>
+    <ul class="hero__facts">
+      <li><strong>12+ hrs</strong>Longevity</li>
+      <li><strong>30%</strong>Perfume oil</li>
+      <li><strong>Karachi</strong>Composed &amp; bottled</li>
     </ul>
   </section>
 
-  <!-- Showcase tabs -->
-  <section class="section" aria-labelledby="showcase-title">
+  <!-- Trust strip -->
+  <section class="marquee" id="trust" aria-label="Why Classical Scents">
+    <div class="marquee__track"><ul class="marquee__group"><li>12+ Hr Longevity</li><li>Extrait Concentration</li><li>Cruelty-Free</li><li>Fast Nationwide Delivery</li><li>100% Authentic</li><li>Cash on Delivery</li></ul><ul class="marquee__group" aria-hidden="true"><li>12+ Hr Longevity</li><li>Extrait Concentration</li><li>Cruelty-Free</li><li>Fast Nationwide Delivery</li><li>100% Authentic</li><li>Cash on Delivery</li></ul></div>
+  </section>
+
+  <!-- Signatures -->
+  <section class="section" aria-labelledby="sig-title">
     <div class="container">
       <div class="section__head reveal">
-        <p class="eyebrow">The Edit</p>
-        <h2 id="showcase-title">Most wanted this season</h2>
+        <p class="eyebrow">The House Signatures</p>
+        <h2 id="sig-title">Each perfume, a <em>character</em> of its own</h2>
       </div>
-      <div data-tabs>
-        <div class="tabs" role="tablist" aria-label="Product showcase">
-          <button class="tab" role="tab" id="tab-bestsellers" aria-selected="true" aria-controls="panel-bestsellers">Best Sellers</button>
-          <button class="tab" role="tab" id="tab-new" aria-selected="false" aria-controls="panel-new" tabindex="-1">New Arrivals</button>
-          <button class="tab" role="tab" id="tab-all" aria-selected="false" aria-controls="panel-all" tabindex="-1">All Fragrances</button>
-        </div>
-        <div role="tabpanel" id="panel-bestsellers" aria-labelledby="tab-bestsellers"><div class="grid"></div></div>
-        <div role="tabpanel" id="panel-new" aria-labelledby="tab-new" hidden><div class="grid"></div></div>
-        <div role="tabpanel" id="panel-all" aria-labelledby="tab-all" hidden><div class="grid"></div></div>
+      <div class="sigs" id="signatures">
+        <noscript><p class="text-center"><a class="link" href="shop.html">Browse all fragrances</a></p></noscript>
       </div>
-      <noscript><p class="text-center"><a class="link" href="shop.html">Browse all fragrances</a></p></noscript>
-      <p class="text-center" style="margin-top:40px"><a class="btn btn--outline" href="shop.html">View All Fragrances</a></p>
+      <p class="text-center" style="margin-top:88px"><a class="btn btn--outline" href="shop.html">View All Fragrances</a></p>
     </div>
   </section>
 
@@ -186,7 +181,7 @@
     <div class="container">
       <div class="section__head reveal">
         <p class="eyebrow">Shop by Collection</p>
-        <h2 id="coll-title">Three ways to be remembered</h2>
+        <h2 id="coll-title">Three ways to be <em>remembered</em></h2>
       </div>
       <div class="collections">
         <a class="coll reveal" href="shop.html?collection=signature"><img src="images/collection-signature.jpg" width="600" height="800" alt="Signature collection bottle in dark gold light" loading="lazy" decoding="async"><div class="coll__text"><h3>Signature</h3><p>The house classics</p></div></a>
@@ -201,7 +196,7 @@
     <div class="container quiz">
       <div class="reveal">
         <p class="eyebrow">Find Your Scent</p>
-        <h2 id="quiz-title">Three answers. Your three best matches.</h2>
+        <h2 id="quiz-title">Three answers. Your three best <em>matches</em>.</h2>
         <p class="lead" style="margin-bottom:32px">Tell us where you are going and how you want to feel, and we will shortlist from the full range.</p>
         <div class="quiz__step">
           <h3><span>01</span>Occasion</h3>
@@ -243,7 +238,7 @@
     <div class="container">
       <div class="section__head reveal">
         <p class="eyebrow">Shop by Gender</p>
-        <h2 id="gender-title">For him, for her, for everyone</h2>
+        <h2 id="gender-title">For him, for her, for <em>everyone</em></h2>
       </div>
       <div class="genders">
         <a class="gender reveal" href="shop.html?gender=men"><img src="images/gender-men.jpg" width="600" height="750" alt="Alpha bottle for men" loading="lazy" decoding="async"><span class="gender__label"><h3>Men</h3><span>Woods, musk, leather</span></span></a>
@@ -259,7 +254,7 @@
       <div class="story__media reveal"><img src="images/about-1.jpg" width="600" height="750" alt="Alpha, Queen, Divine and Royal bottles in a row" loading="lazy" decoding="async"></div>
       <div class="reveal">
         <p class="eyebrow">Our Craft</p>
-        <h2 id="story-title">The Art of Classical Perfumery</h2>
+        <h2 id="story-title">The Art of <em>Classical</em> Perfumery</h2>
         <p class="lead">We compose slowly, in small batches, the way attar houses in the subcontinent have for two centuries. Every extrait rests for six weeks before it is bottled, so the top notes settle and the base notes learn to stay.</p>
         <p class="lead">No borrowed formulas, no diluted sprays. Just concentrated perfume that lasts a Karachi day and still means something by night.</p>
         <a class="link" href="about.html">Read our story</a>
@@ -277,7 +272,7 @@
     <div class="container">
       <div class="section__head reveal">
         <p class="eyebrow">Gift Sets &amp; Bundles</p>
-        <h2 id="bundle-title">Give a signature, save a little</h2>
+        <h2 id="bundle-title">Give a <em>signature</em>, save a little</h2>
       </div>
       <div class="bundles" id="bundles"></div>
     </div>
@@ -288,7 +283,7 @@
     <div class="container">
       <div class="section__head reveal">
         <p class="eyebrow">Reviews</p>
-        <h2 id="reviews-title">Worn across Pakistan</h2>
+        <h2 id="reviews-title">Worn across <em>Pakistan</em></h2>
       </div>
       <div class="reviews">
         <div class="reviews__track" id="reviews-track" tabindex="0" aria-label="Customer reviews, scroll horizontally"></div>
@@ -332,7 +327,7 @@
   <section class="section" aria-labelledby="nl-title">
     <div class="container newsletter reveal">
       <p class="eyebrow">Join the Inner Circle</p>
-      <h2 id="nl-title">10% off your first order</h2>
+      <h2 id="nl-title"><em>10% off</em> your first order</h2>
       <p class="lead" style="margin:12px auto 0">Early access to new releases, restocks and private sales. One email a month, never more.</p>
       <form id="newsletter-form" data-validate data-success-toast="Welcome to the Inner Circle.">
         <div class="field" style="margin:0">
@@ -399,6 +394,7 @@
       </address>
     </div>
   </div>
+  <p class="footer__mark" aria-hidden="true">Classical Scents</p>
   <div class="container footer__bottom">
     <p>&copy; 2026 Classical Scents. All rights reserved.</p>
     <ul class="payments" aria-label="Accepted payment methods">
