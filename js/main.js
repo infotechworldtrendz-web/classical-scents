@@ -50,7 +50,32 @@
       return '<button type="button" class="chip" role="radio" aria-checked="' + (s.ml === cur.ml) + '" data-ml="' + s.ml + '">' + s.ml + 'ml</button>';
     }).join('') + '</div>';
   }
+  /* Stone-stage tile: moody backdrop, bottle standing on the stone and breaking out of the frame. */
+  function stageHtml(p, withText, extraHtml) {
+    var src = 'images/products/' + p.image, url = 'product.html?id=' + p.id, cw = (p.cut || [380, 720])[0];
+    return '<div class="stage" style="--accent:' + (p.accent || '#C9A55C') + '">' +
+      '<a class="stage__tile" href="' + url + '" aria-label="Discover ' + esc(p.name) + '">' +
+        '<picture class="stage__bg"><source type="image/webp" srcset="' + src + '-stage.webp"><img src="' + src + '-stage.jpg" width="1000" height="900" alt="" loading="lazy" decoding="async"></picture>' +
+        (extraHtml || '') +
+        (withText ? '<span class="stage__text"><span class="stage__name">' + esc(p.name) + '</span><span class="stage__kicker">Extrait de Parfum</span><span class="stage__line">' + esc(p.tagline || '') + '</span></span>' +
+          '<span class="stage__cta"><span class="stage__arrow"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\"/></svg></span>discover</span>' : '') +
+      '</a>' +
+      '<picture class="stage__bottle"><source type="image/webp" srcset="' + src + '-cut.webp"><img src="' + src + '-cut.png" width="' + cw + '" height="720" alt="' + esc(p.name) + ' perfume bottle" loading="lazy" decoding="async"></picture>' +
+    '</div>';
+  }
   function card(p) {
+    var s = defSize(p), out = p.stock === 0, url = 'product.html?id=' + p.id;
+    if (!p.cut) return legacyCard(p);
+    return '<article class="card pcard' + (out ? ' card--soldout' : '') + '" data-id="' + p.id + '" data-ml="' + s.ml + '">' + stageHtml(p, true) +
+      '<button type="button" class="icon-btn card__wish" data-wish="' + p.id + '" aria-pressed="' + (wish.indexOf(p.id) > -1) + '" aria-label="Add ' + esc(p.name) + ' to wishlist">' + HEART + '</button>' +
+      '<div class="card__body"><h3 class="sr-only"><a href="' + url + '">' + esc(p.name) + '</a></h3>' +
+      '<div class="pcard__badges">' + badges(p) + '</div>' +
+      '<p class="card__notes">' + esc(p.family) + ' • ' + esc(p.keyNotes.join(', ')) + '</p>' + stars(p.rating, p.reviewCount) +
+      '<div class="card__price" data-price>' + priceHtml(s) + '</div><p class="card__desc">' + esc(p.description) + '</p>' + sizeChips(p, s) +
+      '<div class="pcard__actions">' + (out ? '<button type="button" class="btn btn--gold btn--sm" data-notify="' + p.id + '">Notify Me</button>' : '<button type="button" class="btn btn--gold btn--sm" data-add="' + p.id + '">Add to Cart</button>') +
+      '<button type="button" class="btn btn--outline btn--sm" data-quick="' + p.id + '">Quick View</button></div></div></article>';
+  }
+  function legacyCard(p) {
     var s = defSize(p), out = p.stock === 0, url = 'product.html?id=' + p.id, alt = p.name + ' ' + (p.type === 'attar' ? 'attar oil' : 'extrait de parfum') + ' bottle';
     return '<article class="card' + (out ? ' card--soldout' : '') + '" data-id="' + p.id + '" data-ml="' + s.ml + '">' +
       '<div class="card__media"><a href="' + url + '" tabindex="-1" aria-hidden="true">' + picture(p, 1, 'card__main', alt) + picture(p, 2, 'card__alt', '') + '</a>' +
@@ -295,8 +320,9 @@
     var sg = $('#signatures');
     if (sg) sg.innerHTML = PRODUCTS.map(function (p, i) {
       var s = defSize(p), url = 'product.html?id=' + p.id, note = function (l, a) { return '<div><dt>' + l + '</dt><dd>' + esc(a.join(', ')) + '</dd></div>'; };
-      return '<article class="sig reveal" data-id="' + p.id + '" data-ml="' + s.ml + '" style="--accent:' + (p.accent || '#C9A55C') + '">' +
-        '<a class="sig__media" href="' + url + '" aria-label="View ' + esc(p.name) + '"><span class="sig__num" aria-hidden="true">' + ('0' + (i + 1)).slice(-2) + '</span>' + picture(p, 1, '', p.name + ' perfume bottle') + '</a>' +
+      var media = p.cut ? '<div class="sig__media sig__media--stage">' + stageHtml(p, false, '<span class="stage__num" aria-hidden="true">' + ('0' + (i + 1)).slice(-2) + '</span>') + '</div>'
+        : '<a class="sig__media" href="' + url + '" aria-label="View ' + esc(p.name) + '">' + picture(p, 1, '', p.name + ' perfume bottle') + '</a>';
+      return '<article class="sig reveal" data-id="' + p.id + '" data-ml="' + s.ml + '" style="--accent:' + (p.accent || '#C9A55C') + '">' + media +
         '<div class="sig__body"><p class="eyebrow">' + esc(p.family) + ' • ' + { men: 'For Men', women: 'For Women', unisex: 'Unisex' }[p.gender] + '</p><h3 class="sig__name">' + esc(p.name) + '</h3><p class="sig__desc">' + esc(p.description) + '</p>' +
         '<dl class="sig__notes">' + note('Top', p.topNotes) + note('Heart', p.heartNotes) + note('Base', p.baseNotes) + '</dl>' +
         '<div class="sig__buy"><div data-price>' + priceHtml(s) + '</div><span class="sig__size">' + s.ml + 'ml • ' + p.longevity + '+ hrs</span></div>' +

@@ -77,6 +77,15 @@ Products with real photos use a `photos` list in `js/products.js`, for example `
 
 Put a `.webp` copy with the same name next to each file; the site serves WebP first and falls back to PNG/JPG. Royal, Queen, Alpha and Divine use real photos. Add your other perfumes as new entries with ids 5, 6 and 7.
 
+### Promo tiles (stone stage)
+
+Product cards, the home features and the collection tiles use two extra files per perfume:
+
+- `images/products/<image>-stage.jpg` / `.webp`: the 1000×900 backdrop with the stone and props. The stone's top surface sits 25.8% above the bottom edge.
+- `images/products/<image>-cut.png` / `.webp`: the bottle alone, tightly cropped, transparent, base at the bottom edge.
+
+Set `tagline` and `cut: [width, 720]` on the product in `js/products.js`. A product without `cut` falls back to the plain card.
+
 ## Deploy to GitHub Pages
 
 1. Create a repository and push this folder to the `main` branch.

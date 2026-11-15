@@ -879,3 +879,80 @@ h1 em, h2 em, h3 em { font-style: italic; background: var(--gold-grad); -webkit-
 .gallery__thumbs button, .search__item img, .line img, .cart-page .line img { border-radius: var(--img-r-sm); overflow: hidden; }
 .card__actions .btn { border-radius: 999px; }
 .grid--list .card__media { border-radius: var(--img-r); }
+
+/* ==========================================================================
+   STONE STAGE TILES
+   Promo-card look: moody backdrop, bottle on a stone breaking out of the
+   rounded frame, bold sans copy top-left, round "discover" arrow.
+   All sizes use container units, so the tile scales as one piece.
+   ========================================================================== */
+.stage { position: relative; container-type: inline-size; padding-top: 14%; }
+.stage__tile { position: relative; display: block; aspect-ratio: 10 / 9; border-radius: var(--img-r, 18px); overflow: hidden; isolation: isolate; color: #fff; background: #120f14; }
+.stage__bg, .stage__bg img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.stage__bg img { object-fit: cover; transition: transform 1.4s var(--ease); }
+.stage:hover .stage__bg img { transform: scale(1.05); }
+.stage__tile::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255,255,255,.06); pointer-events: none; }
+
+/* Bottle: stands on the stone (top surface sits 25.8% above the tile bottom) */
+.stage__bottle { position: absolute; z-index: 2; left: var(--x, 65cqw); bottom: 23.2cqw; height: var(--h, 72cqw); transform: translateX(-50%); pointer-events: none; transition: transform .8s var(--ease); }
+.stage__bottle img { display: block; height: 100%; width: auto; max-width: none; filter: drop-shadow(0 1.6cqw 2cqw rgba(0,0,0,.35)); }
+.stage:hover .stage__bottle { transform: translateX(-50%) translateY(-1.4cqw); }
+
+/* Copy */
+.stage__text { position: absolute; z-index: 1; left: 5.6cqw; top: 6cqw; max-width: 46%; font-family: var(--sans); text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+.stage__name { display: block; font-weight: 700; font-size: 10cqw; line-height: 1; letter-spacing: -.02em; }
+.stage__kicker { display: block; margin-top: 1.4cqw; font-weight: 500; font-size: 2.6cqw; letter-spacing: .22em; text-transform: uppercase; opacity: .92; }
+.stage__line { display: block; margin-top: 3.4cqw; font-weight: 600; font-size: 4.3cqw; line-height: 1.2; max-width: 13ch; }
+.stage__cta { position: absolute; z-index: 3; left: 5.6cqw; bottom: 5.4cqw; display: inline-flex; align-items: center; gap: 2.2cqw; font-family: var(--sans); font-weight: 600; font-size: 4.8cqw; letter-spacing: -.01em; }
+.stage__arrow { display: grid; place-items: center; width: 7.4cqw; height: 7.4cqw; border-radius: 50%; background: #fff; color: #111; transition: transform .4s var(--ease), background-color .3s; }
+.stage__arrow svg { width: 3.6cqw; height: 3.6cqw; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.stage:hover .stage__arrow { transform: translateX(.8cqw); background: var(--gold-pale, #E6D3A3); }
+.stage__num { position: absolute; z-index: 1; left: 5.6cqw; top: 4cqw; font-family: var(--serif); font-size: 15cqw; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(255,236,210,.45); }
+
+/* Small tiles (phone grid, list view): keep it to name + arrow */
+@container (max-width: 300px) {
+  .stage__kicker, .stage__line { display: none; }
+  .stage__name { font-size: 13cqw; }
+  .stage__cta { font-size: 0; gap: 0; }
+  .stage__arrow { width: 11cqw; height: 11cqw; }
+  .stage__arrow svg { width: 5cqw; height: 5cqw; }
+}
+
+/* Product cards built on the stage */
+.pcard { position: relative; }
+.pcard .card__wish { position: absolute; top: calc(14% + 8px); right: 8px; z-index: 4; color: #fff; }
+.pcard .card__wish[aria-pressed="true"] { color: #E6D3A3; }
+.pcard .card__wish[aria-pressed="true"] svg { fill: #E6D3A3; }
+.pcard .card__body { padding-top: 18px; }
+.pcard__badges { display: flex; flex-wrap: wrap; gap: 10px; min-height: 0; }
+.pcard__badges:empty { display: none; }
+.pcard__actions { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: 12px; }
+.pcard__actions .btn { border-radius: 999px; min-height: 42px; }
+@media (max-width: 479px) { .pcard__actions { grid-template-columns: 1fr; } .pcard__actions .btn { padding: 0 10px; font-size: .58rem; letter-spacing: .14em; } }
+.card--soldout .stage__bottle img { opacity: .55; }
+.grid--list .pcard { align-items: center; }
+.grid--list .pcard .card__wish { top: 8px; }
+
+/* Home: signature features use the stage */
+.sig__media--stage { aspect-ratio: auto; background: none; overflow: visible; border-radius: 0; }
+.sig__media--stage::after { display: none; }
+
+/* Home: collection tiles */
+.collections--stage { gap: 20px 16px; }
+@media (min-width: 900px) { .collections--stage { gap: 32px; } }
+.collections--stage .stage--coll { grid-column: auto; }
+@media (max-width: 899px) { .collections--stage { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
+
+/* Light theme: tiles stay dark photography with white copy */
+:root[data-theme="light"] .stage__tile { color: #fff; }
+:root[data-theme="light"] .pcard .card__wish { color: #fff; }
+/* Reset the older feature-media rules inside the stage version */
+.sig__media--stage picture.stage__bg { position: absolute; inset: 0; }
+.sig__media--stage .stage__bg img { width: 100%; height: 100%; padding: 0; object-fit: cover; }
+.sig__media--stage picture.stage__bottle { position: absolute; inset: auto; left: var(--x, 65cqw); bottom: 23.2cqw; height: var(--h, 72cqw); }
+.sig__media--stage .stage__bottle img { width: auto; height: 100%; padding: 0; object-fit: fill; }
+.sig:hover .sig__media--stage .stage__bottle img, .sig:hover .sig__media--stage .stage__bg img { transform: none; }
+.sig:hover .sig__media--stage .stage__bg img { transform: scale(1.05); }
+.stage--coll .stage__text { max-width: 36%; }
+.stage--coll .stage__name { font-size: 8.6cqw; }
+.stage--coll .stage__line { font-size: 3.9cqw; max-width: none; }

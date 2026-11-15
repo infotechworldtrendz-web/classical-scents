@@ -42,7 +42,7 @@ var PRODUCTS = [
     badges: ['bestseller'], rating: 4.9, reviewCount: 236, stock: 32,
     description: 'Saffron and smoky oud poured over golden amber, in a bottle that fades from black to honey. Royal is the scent you wear when the evening matters and you intend to be remembered.',
     howToWear: 'Two sprays on the neck and one on the chest. Let it settle for ten minutes; the oud softens and the amber stays for the rest of the night.',
-    occasions: ['evening', 'wedding'], moods: ['bold', 'warm'], image: 'royal', accent: '#a8762e', photos: ['royal-1.png', 'royal-2.jpg', 'royal-3.jpg']
+    occasions: ['evening', 'wedding'], moods: ['bold', 'warm'], tagline: 'Rare, smoky and made for evening', cut: [357, 720], image: 'royal', accent: '#a8762e', photos: ['royal-1.png', 'royal-2.jpg', 'royal-3.jpg']
   },
   {
     id: 2, slug: 'queen', name: 'Queen', gender: 'women', collection: 'signature', type: 'extrait', family: 'Floral',
@@ -52,7 +52,7 @@ var PRODUCTS = [
     badges: ['new'], rating: 4.8, reviewCount: 118, stock: 40,
     description: 'Juicy raspberry and pink pepper open onto a bouquet of rose and peony, softened by vanilla musk. Bright, feminine and confident, like its rose-to-sapphire bottle.',
     howToWear: 'Spray on wrists, neck and the hem of a dupatta. Two sprays are plenty for daytime; add one more for an evening event.',
-    occasions: ['wedding', 'daily'], moods: ['soft', 'bold'], image: 'queen', accent: '#b0406a', photos: ['queen-1.png', 'queen-2.jpg', 'queen-3.jpg']
+    occasions: ['wedding', 'daily'], moods: ['soft', 'bold'], tagline: 'Bright, rosy and hard to forget', cut: [387, 720], image: 'queen', accent: '#b0406a', photos: ['queen-1.png', 'queen-2.jpg', 'queen-3.jpg']
   },
   {
     id: 3, slug: 'alpha', name: 'Alpha', gender: 'men', collection: 'signature', type: 'extrait', family: 'Woody',
@@ -62,7 +62,7 @@ var PRODUCTS = [
     badges: ['bestseller'], rating: 4.8, reviewCount: 204, stock: 45,
     description: 'Peppered bergamot and cardamom over a dry heart of vetiver and lavender, finishing on polished cedar and amberwood. A sharp, grown-up signature for the office and well beyond it.',
     howToWear: 'Two sprays on the collar and one on the back of the neck. It projects cleanly for the first hours, then sits close and woody into the evening.',
-    occasions: ['office', 'daily', 'evening'], moods: ['bold', 'fresh'], image: 'alpha', accent: '#6f5c86', photos: ['alpha-1.png', 'alpha-2.jpg', 'alpha-3.jpg']
+    occasions: ['office', 'daily', 'evening'], moods: ['bold', 'fresh'], tagline: 'Sharp, woody and quietly confident', cut: [387, 720], image: 'alpha', accent: '#6f5c86', photos: ['alpha-1.png', 'alpha-2.jpg', 'alpha-3.jpg']
   },
   {
     id: 4, slug: 'divine', name: 'Divine', gender: 'unisex', collection: 'signature', type: 'extrait', family: 'Amber',
@@ -72,7 +72,7 @@ var PRODUCTS = [
     badges: ['new'], rating: 4.8, reviewCount: 97, stock: 38,
     description: 'Golden honey and orange blossom glowing over creamy sandalwood and vanilla, as warm as the liquid in its clear glass. Soft enough for every day, rich enough to be noticed.',
     howToWear: 'Spray on pulse points and once on a scarf or shawl. Divine clings to fabric beautifully, so you will still catch it the next morning.',
-    occasions: ['daily', 'evening'], moods: ['warm', 'soft'], image: 'divine', accent: '#c9953c', photos: ['divine-1.png', 'divine-2.jpg', 'divine-3.jpg']
+    occasions: ['daily', 'evening'], moods: ['warm', 'soft'], tagline: 'Warm, golden and endlessly soft', cut: [368, 720], image: 'divine', accent: '#c9953c', photos: ['divine-1.png', 'divine-2.jpg', 'divine-3.jpg']
   }
 ];
 
